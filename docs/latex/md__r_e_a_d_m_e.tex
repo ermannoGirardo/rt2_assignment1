@@ -1,0 +1,32 @@
+This is the action branch you may find\+: Instead of using a position server as in the main branch here it is replaced by an action server /action/\+Position.action In this way the user can stop the robot in a current position simply press 0 after has pressed 1 in order to generate a new random target and setting the velocity of the robot To run the simulation in Gazebo simply copy the following command in the ubuntu shall\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun rt2\_assignment1 sim.launch}
+\end{DoxyCode}
+ \begin{DoxyVerb}A new simulation in Coppelia is implemented.
+To run the simulation follow this simply instructions:
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roscore \&      \#in order to launch the ROS master}
+\end{DoxyCode}
+ \begin{DoxyVerb}Only after having installed CoppeliaSim move into the executable folder and launch it
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./coppeliaSim.sh}
+\end{DoxyCode}
+ \begin{DoxyVerb}Please check that ROS is correctly setted before proceed
+
+Then add the Coppelia scene that you can find in this branch:
+coppeliaScene.ttt
+
+To launch the simulation digit the following command
+\end{DoxyVerb}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch rt2\_assignment1 simVrep.launch}
+\end{DoxyCode}
+ 
