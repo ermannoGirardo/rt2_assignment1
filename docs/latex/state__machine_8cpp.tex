@@ -1,0 +1,54 @@
+\hypertarget{state__machine_8cpp}{}\doxysection{src/state\+\_\+machine.cpp File Reference}
+\label{state__machine_8cpp}\index{src/state\_machine.cpp@{src/state\_machine.cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Command.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Random\+Position.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Position\+Action.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}actionlib/client/simple\+\_\+action\+\_\+client.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}actionlib/client/terminal\+\_\+state.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$geometry\+\_\+msgs/\+Twist.\+h$>$}\newline
+Include dependency graph for state\+\_\+machine.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state__machine_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}{user\+\_\+interface}} (rt2\+\_\+assignment1\+::\+Command\+::\+Request \&req, rt2\+\_\+assignment1\+::\+Command\+::\+Response \&res)
+\item 
+int \mbox{\hyperlink{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}{start}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{state\_machine.cpp@{state\_machine.cpp}!main@{main}}
+\index{main@{main}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+main funciton of the state\+\_\+machine node\+: -\/create the service at /user\+\_\+interface and the function callback \mbox{\hyperlink{namespaceuser__interface}{user\+\_\+interface}} -\/create a client for the random position target in order to generate a new random target -\/create a publisher on topic /cmd\+\_\+vel in order to send the correct robot velocity ~\newline
+ -\/create an action client in order to send the position of the goal and if necessary to cancel all goals -\/the action client is able to check if the goal is reached \mbox{\Hypertarget{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}\label{state__machine_8cpp_a1a9543636935547580c0657f4c7c0c2b}} 
+\index{state\_machine.cpp@{state\_machine.cpp}!user\_interface@{user\_interface}}
+\index{user\_interface@{user\_interface}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{user\_interface()}{user\_interface()}}
+{\footnotesize\ttfamily bool user\+\_\+interface (\begin{DoxyParamCaption}\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Request \&}]{req,  }\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Response \&}]{res }\end{DoxyParamCaption})}
+
+function that user interface server use in order to modify the value of the variable start if the client makes the request to \textquotesingle{}start\textquotesingle{} this function set to true the start variable Otherwise is the to false 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}\label{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}} 
+\index{state\_machine.cpp@{state\_machine.cpp}!start@{start}}
+\index{start@{start}!state\_machine.cpp@{state\_machine.cpp}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bool start = false}
+

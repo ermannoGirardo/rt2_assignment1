@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['first_20assignment_20of_20the_20research_20track_202_20course_20_28robotics_20engineering_20_2f_20jemaro_2c_20unige_29_0',['First Assignment of the Research Track 2 course (Robotics Engineering / JEMARO, Unige)',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['change_5fstate_0',['change_state',['../namespacego__to__point.html#a31ee48e5cae36821049b572a96b7c8be',1,'go_to_point']]],
+  ['clbk_5fodom_1',['clbk_odom',['../namespacego__to__point.html#a36304a9f313b0579f7fc69fa01695524',1,'go_to_point']]],
+  ['cmakelists_2etxt_2',['CMakeLists.txt',['../_c_make_lists_8txt.html',1,'']]]
 ];
