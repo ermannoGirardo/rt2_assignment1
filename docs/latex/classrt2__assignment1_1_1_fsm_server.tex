@@ -1,0 +1,50 @@
+\hypertarget{classrt2__assignment1_1_1_fsm_server}{}\doxysection{rt2\+\_\+assignment1\+::Fsm\+Server Class Reference}
+\label{classrt2__assignment1_1_1_fsm_server}\index{rt2\_assignment1::FsmServer@{rt2\_assignment1::FsmServer}}
+
+
+Inheritance diagram for rt2\+\_\+assignment1\+::Fsm\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classrt2__assignment1_1_1_fsm_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rt2\+\_\+assignment1\+::Fsm\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classrt2__assignment1_1_1_fsm_server__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrt2__assignment1_1_1_fsm_server_a1a1ec03417b6aacf419c4fec60469d76}{Fsm\+Server}} (const rclcpp\+::\+Node\+Options \&options)
+\item 
+void \mbox{\hyperlink{classrt2__assignment1_1_1_fsm_server_a7d932b77f9879bbaaabd343ed3db765e}{call\+\_\+clients}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_fsm_server_a1a1ec03417b6aacf419c4fec60469d76}\label{classrt2__assignment1_1_1_fsm_server_a1a1ec03417b6aacf419c4fec60469d76}} 
+\index{rt2\_assignment1::FsmServer@{rt2\_assignment1::FsmServer}!FsmServer@{FsmServer}}
+\index{FsmServer@{FsmServer}!rt2\_assignment1::FsmServer@{rt2\_assignment1::FsmServer}}
+\doxysubsubsection{\texorpdfstring{FsmServer()}{FsmServer()}}
+{\footnotesize\ttfamily rt2\+\_\+assignment1\+::\+Fsm\+Server\+::\+Fsm\+Server (\begin{DoxyParamCaption}\item[{const rclcpp\+::\+Node\+Options \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of the class \mbox{\hyperlink{classrt2__assignment1_1_1_fsm_server}{Fsm\+Server}} which must be considered as a component Here you can find the initialisation of -\/client1\+: in order to ask a new random goal at custom service Random\+Position -\/cllient2\+: in order to set the random goal generated as a goal position and send it to /go\+\_\+to\+\_\+point -\/service\+: in order to read the command sent by the user 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrt2__assignment1_1_1_fsm_server_a7d932b77f9879bbaaabd343ed3db765e}\label{classrt2__assignment1_1_1_fsm_server_a7d932b77f9879bbaaabd343ed3db765e}} 
+\index{rt2\_assignment1::FsmServer@{rt2\_assignment1::FsmServer}!call\_clients@{call\_clients}}
+\index{call\_clients@{call\_clients}!rt2\_assignment1::FsmServer@{rt2\_assignment1::FsmServer}}
+\doxysubsubsection{\texorpdfstring{call\_clients()}{call\_clients()}}
+{\footnotesize\ttfamily void rt2\+\_\+assignment1\+::\+Fsm\+Server\+::call\+\_\+clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Function used to make a request to the Random\+Position service in order to generate a random number. It is also used to get the result of the Random\+Position service and send it to /go\+\_\+to\+\_\+point service Check the value of the variable start, if it is true tbe function makes a request to the Random\+Position server in order to generate a new random goal Once the new random goal is generated the funcion send it to go\+\_\+to\+\_\+point and waits the result 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+state\+\_\+machine.\+cpp\end{DoxyCompactItemize}
