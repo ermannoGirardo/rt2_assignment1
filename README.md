@@ -167,7 +167,8 @@ This launch file is need to launch simultaneosly the container and the two compo
   ./gnomeGazebo.sh
   ```
 
-     
+ ![RosBridgeSimGraph](https://user-images.githubusercontent.com/48509825/118884781-3163f780-b8f7-11eb-975a-0afc0640adeb.png)
+
      
      
      
