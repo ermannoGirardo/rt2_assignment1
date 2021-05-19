@@ -47,14 +47,14 @@ In this branch you can find two nodes in python and two nodes in C++:
 * launch file my_launch.py used to launch the 2 nodes as component and also the container.
 * docs folder with the doxygen documentation
 * my_mapping_rules.yaml
-     
-  # How to set the ros1_bridge package
+    
+# How to set the ros1_bridge package
   
-  1) download the ros1_bridge from the GitHub repository into your ros2 workspace
+1) download the ros1_bridge from the GitHub repository into your ros2 workspace
   ```
   git clone https://github.com/ros2/ros1_bridge
   ```
-  2) to swith the ROS version faster i suggest to create three executables files into your root folder
+2) to swith the ROS version faster i suggest to create three executables files into your root folder
   In order to do this move into root folder then:
     ```
     gedit ros.sh
@@ -87,10 +87,10 @@ In this branch you can find two nodes in python and two nodes in C++:
     source /opt/ros/foxy/setup.bash
     source /root/my_ros2/install/local_setup.bash
     ```
-  3) In order to bridge the three custom service messages exits the my_mapping_rules.yaml
+3) In order to bridge the three custom service messages exits the my_mapping_rules.yaml
      Also the Cmake_list and the package.xml have been modified.
      
-  4) Only now we can build the ros1_bridge into our ros2 workspace.
+4) Only now we can build the ros1_bridge into our ros2 workspace.
      In order to do this source the ros12.sh and moove into your ros2 workspace and run the following command
      
      ```
@@ -109,10 +109,64 @@ In this branch you can find two nodes in python and two nodes in C++:
     rt2_assignment1/srv/RandomPosition' (ROS 2) <=> 'rt2_assignment1/RandomPosition' (ROS 1)
     Then the ros1_bridge is correctly built.
     
+# Launch file 
+
+You can find a launch folder with inside a launch file.
+This launch file is need to launch simultaneosly the container and the two components in C++
+
 # How to launch the simulation
 
-     
-     
+1) Open the first terminal and run the following commands in order to source noetic version and lauch the .launch file
+   Remember that in ROS2 distribution the launch file is written in python.
+   ```
+   cd
+   source ros.sh
+   cd my_ros/
+   roslaunch rt2_assignment1 simBridge.launch
+   ```
+   In this way the two scripts in python should run and Gazebo simulator should starts.
+   
+2) Open a second terminal and run the following commands in order to source both noetic and foxy and launch the bridge
+   ```
+   cd
+   source ros12.sh
+   cd my_ros2/
+   ros2 run ros1_bridge dynamic_bridge
+   ```
+   In this way the messages should be bridged
+   
+3) Open a third terminal and run the following commands in order to source foxy and launch the launch file.
+   Remember that in ROS2 distribution the launch file must be written in python
+   ```
+   cd
+   source ros2.sh
+   cd my_ros2/
+   ros2 launch my_launch.py
+   ```
+   In this way the container and the two nodes should run.
+   To check if it works digit the following command after have sourced foxy
+   
+  ```
+  ros2 component list
+  ```
+  After this three passages the simulation should works
+  
+# Launch all in one single command
+
+  Install gnome-terminal running the following command:
+  ```
+  install gnome-terminal
+  ```
+  Put the script gnomeGazebo.sh into the path where you put the prevoius three executable
+  then change the permission to gnomeGazebo.sh
+  ```
+  chmod +x  gnomeGazebo.sh
+  ```
+  In order to launch the script digit
+  ```
+  ./gnomeGazebo.sh
+  ```
+
      
      
      
