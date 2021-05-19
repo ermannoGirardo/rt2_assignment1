@@ -77,7 +77,7 @@ roslaunch rt2_assignment1 simVrep.launch
 ```
 If you press 1 in order to start moving the robot you must see the pioner moves to reach the goal position.
 if you press 0 you must see the pioner stops in the current position.
-
+If the simulation is too slow click on the hare on the top.
 
 ![VrepSimGraph](https://user-images.githubusercontent.com/48509825/118884208-72a7d780-b8f6-11eb-8146-c53e642f9187.png)
 
