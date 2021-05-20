@@ -29,7 +29,7 @@ In this branch you can find two nodes in python and two nodes in C++:
   theta component for the orientation) in a specified interval [min,max] via 
   custom service message RandomPosition.srv.
   
-* state_machine.cpp is a node wich communicats with all other nodes, in particular:
+* state_machine.cpp is a node wich communicates with all other nodes, in particular:
   1) a client is generated in order to set the fields of the random target and send the request
      to position_service
   2) The node implements a function callback of the user_interface , in order to check the request done
