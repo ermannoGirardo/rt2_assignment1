@@ -1,10 +1,11 @@
 # First Assignment of the Research Track 2 course (Robotics Engineering / JEMARO, Unige) Ermanno Girardo S4506472
 
 # Requirements of action branch
-Localisation and path planning of a non-holonomic robot in an environment with Gazebo simulator.
+Localisation and path planning of a non-holonomic robot in an environment with Gazebo and Coppelia simulators.
 Taking the code in the main branch i want to replace the go_to_point service with an action service by custom action message Position.action.
 In this way the user can stop the robot in whatever place wants, instead of stopping the robot once it reaches the target goal.
-Infact implementing the action service is possible to cancel the goal once the user press 0.
+Infact implementing the action service is possible to cancel the goal once the user press 0 and set the velocity of the robot
+equal to zero in order to stop it.
 
 # What you can find in this branch 
 In this branch you can find two nodes in python and two nodes in C++:
