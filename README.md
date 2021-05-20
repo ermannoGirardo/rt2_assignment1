@@ -127,6 +127,7 @@ This launch file is need to launch simultaneosly the container and the two compo
    roslaunch rt2_assignment1 simBridge.launch
    ```
    In this way the two scripts in python should run and Gazebo simulator should starts.
+   Of course you need to download in your ROS noetic version the rt2_assignment-main package.
    
 2) Open a second terminal and run the following commands in order to source both noetic and foxy and launch the bridge
    ```
