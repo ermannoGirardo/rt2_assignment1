@@ -104,10 +104,12 @@ In this branch you can find two nodes in python and two nodes in C++:
      ros2 run ros1_bridge dynamic_bridge --print-pairs
      ```
    you should see the following lines on your terminal:
-    rt2_assignment1/srv/Command' (ROS 2) <=> 'rt2_assignment1/Command' (ROS 1)
-    rt2_assignment1/srv/Position' (ROS 2) <=> 'rt2_assignment1/Position' (ROS 1)
-    rt2_assignment1/srv/RandomPosition' (ROS 2) <=> 'rt2_assignment1/RandomPosition' (ROS 1)
-    Then the ros1_bridge is correctly built.
+   
+   rt2_assignment1/srv/Command' (ROS 2) <=> 'rt2_assignment1/Command' (ROS 1)
+   rt2_assignment1/srv/Position' (ROS 2) <=> 'rt2_assignment1/Position' (ROS 1)
+   rt2_assignment1/srv/RandomPosition' (ROS 2) <=> 'rt2_assignment1/RandomPosition' (ROS 1)
+   
+   Then the ros1_bridge is correctly built.
     
 # Launch file 
 
@@ -116,7 +118,7 @@ This launch file is need to launch simultaneosly the container and the two compo
 
 # How to launch the simulation
 
-1) Open the first terminal and run the following commands in order to source noetic version and lauch the .launch file
+1) Open a terminal and run the following commands in order to source noetic version and lauch the .launch file
    Remember that in ROS2 distribution the launch file is written in python.
    ```
    cd
