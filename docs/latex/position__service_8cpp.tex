@@ -1,0 +1,36 @@
+\hypertarget{position__service_8cpp}{}\doxysection{src/position\+\_\+service.cpp File Reference}
+\label{position__service_8cpp}\index{src/position\_service.cpp@{src/position\_service.cpp}}
+
+
+\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}} is a simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval \mbox{[}min,max\mbox{]} via custom service message Random\+Position.\+srv. The node is written in C++ composable format in order to be a component node  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}rclcpp/rclcpp.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rclcpp\+\_\+components/register\+\_\+node\+\_\+macro.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/srv/random\+\_\+position.\+hpp\char`\"{}}\newline
+Include dependency graph for position\+\_\+service.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{position__service_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrt2__assignment1_1_1_position_service}{rt2\+\_\+assignment1\+::\+Position\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}} is a simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval \mbox{[}min,max\mbox{]} via custom service message Random\+Position.\+srv. The node is written in C++ composable format in order to be a component node 
+
+\begin{DoxyAuthor}{Author}
+Ermanno Girardo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2021 
+\end{DoxyDate}

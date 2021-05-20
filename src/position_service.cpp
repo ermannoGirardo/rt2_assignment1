@@ -1,3 +1,15 @@
+/******************************************************************************************************************************//**
+ * \file   position_service.cpp
+ * \brief position_service.cpp is a simple server that has the scope of generate a random target. 
+ *	  This node infact generate three random components (x and y components for the position, 
+ *	  theta component for the orientation) in a specified interval [min,max] via custom service message RandomPosition.srv.
+ *	  The node is written in C++ composable format in order to be a component node
+ *
+ * \author Ermanno Girardo
+ * \date   May  2021
+**********************************************************************************************************************************/
+
+
 #include <memory>
 #include <inttypes.h>
 #include "rclcpp/rclcpp.hpp"
