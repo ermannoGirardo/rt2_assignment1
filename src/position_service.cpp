@@ -1,3 +1,18 @@
+
+/*****************************************************************//**
+ * \file   position_service.cpp
+ * \brief Simple server that has the scope of generate a random target.
+ 	 This node infact generate three random components 
+ 	 (x and y components for the position, theta 
+ 	 component for the orientation) in a specified interval 
+ 	 [min,max] via custom service message RandomPosition.srv.
+ *
+ * \author Girardo Ermanno
+ * \date   May 2021
+***********************************************************************/
+
+
+
 #include "ros/ros.h"
 #include "rt2_assignment1/RandomPosition.h"
 

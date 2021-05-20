@@ -1,3 +1,13 @@
+"""
+/user_interface.py
+
+/brief implements an user interface in order to start or stop the robot. In particular it is a client that reads the user command and via custom service message Command.srv send it to the state_machine node. When the user press 1 the node sends a "start" messagge to the user_interface server. Instead if the user press 0 the node the function of go_to_point is stopped and in state_machine node the goal is cancelled, setting also the velocity to zero.
+
+/author Ermanno Girardo 
+
+/date May 2021
+"""
+
 import rospy
 import time
 from rt2_assignment1.srv import Command

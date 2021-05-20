@@ -72,6 +72,9 @@ $(function() {
 <div class="title">state_machine.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="state__machine_8cpp.html" title="state_machine.cpp is a node wich communicats with all other nodes, in particular: 1) a client is gene...">state_machine.cpp</a> is a node wich communicats with all other nodes, in particular: 1) a client is generated in order to set the fields of the random target and send the request to position_service 2) The node implements a function callback of the <a class="el" href="namespaceuser__interface.html">user_interface</a> , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd_vel the velocity equal to zero if the user decides to stop the robot.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;ros/ros.h&quot;</code><br />
 <code>#include &quot;rt2_assignment1/Command.h&quot;</code><br />
 <code>#include &quot;rt2_assignment1/RandomPosition.h&quot;</code><br />
@@ -84,7 +87,7 @@ Include dependency graph for state_machine.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="state__machine_8cpp__incl.png" border="0" usemap="#src_2state__machine_8cpp" alt=""/></div>
 <map name="src_2state__machine_8cpp" id="src_2state__machine_8cpp">
-<area shape="rect" title=" " alt="" coords="634,5,802,32"/>
+<area shape="rect" title="state_machine.cpp is a node wich communicats with all other nodes, in particular: 1) a client is gene..." alt="" coords="634,5,802,32"/>
 <area shape="rect" title=" " alt="" coords="5,87,84,114"/>
 <area shape="rect" title=" " alt="" coords="108,87,323,114"/>
 <area shape="rect" title=" " alt="" coords="347,87,601,114"/>
@@ -104,10 +107,15 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab376b87f96a574a793c03c53e75afec8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state__machine_8cpp.html#ab376b87f96a574a793c03c53e75afec8">start</a> = false</td></tr>
+<tr class="memitem:ab376b87f96a574a793c03c53e75afec8"><td class="memItemLeft" align="right" valign="top"><a id="ab376b87f96a574a793c03c53e75afec8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> = false</td></tr>
 <tr class="separator:ab376b87f96a574a793c03c53e75afec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="state__machine_8cpp.html" title="state_machine.cpp is a node wich communicats with all other nodes, in particular: 1) a client is gene...">state_machine.cpp</a> is a node wich communicats with all other nodes, in particular: 1) a client is generated in order to set the fields of the random target and send the request to position_service 2) The node implements a function callback of the <a class="el" href="namespaceuser__interface.html">user_interface</a> , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd_vel the velocity equal to zero if the user decides to stop the robot. </p>
+<dl class="section author"><dt>Author</dt><dd>GirardoErmanno </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>May 2021 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -164,21 +172,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>function that user interface server use in order to modify the value of the variable start if the client makes the request to 'start' this function set to true the start variable Otherwise is the to false </p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ab376b87f96a574a793c03c53e75afec8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab376b87f96a574a793c03c53e75afec8">&#9670;&nbsp;</a></span>start</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool start = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

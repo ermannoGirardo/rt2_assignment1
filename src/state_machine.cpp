@@ -1,3 +1,18 @@
+
+/**************************************************************************************************************************//**
+ * \file   state_machine.cpp
+ * \brief state_machine.cpp is a node wich communicats with all other nodes, in particular:
+	  1) a client is generated in order to set the fields of the random target and send the request to position_service
+	  2) The node implements a function callback of the user_interface , in order to check the request done by the user, 
+	     setting properly the value of the variable start.
+	  3) Implements an action client in order to cancel the goal if the user decides to stop the robot.
+	  4) Publish on topic /cmd_vel the velocity equal to zero if the user decides to stop the robot.
+ *
+ * \author GirardoErmanno
+ * \date   May 2021
+******************************************************************************************************************************/
+
+
 #include "ros/ros.h"
 #include "rt2_assignment1/Command.h"
 #include "rt2_assignment1/RandomPosition.h"

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dist_5fprecision_5f_55',['dist_precision_',['../namespacego__to__point.html#a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5',1,'go_to_point']]]
+  ['position_5f_13',['position_',['../namespacego__to__point.html#a91dbaab25e6080f6b5dbf82cac6ce75c',1,'go_to_point']]]
 ];

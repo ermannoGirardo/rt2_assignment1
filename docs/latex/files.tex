@@ -1,7 +1,5 @@
 \doxysection{File List}
-Here is a list of all files with brief descriptions\+:\begin{DoxyCompactList}
-\item\contentsline{section}{scripts/\mbox{\hyperlink{go__to__point_8py}{go\+\_\+to\+\_\+point.\+py}} }{\pageref{go__to__point_8py}}{}
-\item\contentsline{section}{scripts/\mbox{\hyperlink{user__interface_8py}{user\+\_\+interface.\+py}} }{\pageref{user__interface_8py}}{}
-\item\contentsline{section}{src/\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}} }{\pageref{position__service_8cpp}}{}
-\item\contentsline{section}{src/\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}} }{\pageref{state__machine_8cpp}}{}
+Here is a list of all documented files with brief descriptions\+:\begin{DoxyCompactList}
+\item\contentsline{section}{src/\mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}} \\*Simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval \mbox{[}min,max\mbox{]} via custom service message Random\+Position.\+srv }{\pageref{position__service_8cpp}}{}
+\item\contentsline{section}{src/\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}} \\*\mbox{\hyperlink{state__machine_8cpp}{State\+\_\+machine.\+cpp}} is a node wich communicats with all other nodes, in particular\+: 1) a client is generated in order to set the fields of the random target and send the request to position\+\_\+service 2) The node implements a function callback of the \mbox{\hyperlink{namespaceuser__interface}{user\+\_\+interface}} , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd\+\_\+vel the velocity equal to zero if the user decides to stop the robot }{\pageref{state__machine_8cpp}}{}
 \end{DoxyCompactList}

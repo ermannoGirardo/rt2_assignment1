@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kp_5fa_12',['kp_a',['../namespacego__to__point.html#a524106fc7667a0927951dfd89d52d6a7',1,'go_to_point']]],
-  ['kp_5fd_13',['kp_d',['../namespacego__to__point.html#a7bc498652ca66932e704e738b50c297b',1,'go_to_point']]]
+  ['user_5finterface_5',['user_interface',['../namespaceuser__interface.html',1,'user_interface'],['../state__machine_8cpp.html#a1a9543636935547580c0657f4c7c0c2b',1,'user_interface(rt2_assignment1::Command::Request &amp;req, rt2_assignment1::Command::Response &amp;res):&#160;state_machine.cpp']]]
 ];

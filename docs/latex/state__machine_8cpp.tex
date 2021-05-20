@@ -1,5 +1,10 @@
 \hypertarget{state__machine_8cpp}{}\doxysection{src/state\+\_\+machine.cpp File Reference}
 \label{state__machine_8cpp}\index{src/state\_machine.cpp@{src/state\_machine.cpp}}
+
+
+\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}} is a node wich communicats with all other nodes, in particular\+: 1) a client is generated in order to set the fields of the random target and send the request to position\+\_\+service 2) The node implements a function callback of the \mbox{\hyperlink{namespaceuser__interface}{user\+\_\+interface}} , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd\+\_\+vel the velocity equal to zero if the user decides to stop the robot.  
+
+
 {\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Command.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}rt2\+\_\+assignment1/\+Random\+Position.\+h\char`\"{}}\newline
@@ -25,8 +30,20 @@ int \mbox{\hyperlink{state__machine_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}{start}} = false
+\mbox{\Hypertarget{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}\label{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}} 
+bool {\bfseries start} = false
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}} is a node wich communicats with all other nodes, in particular\+: 1) a client is generated in order to set the fields of the random target and send the request to position\+\_\+service 2) The node implements a function callback of the \mbox{\hyperlink{namespaceuser__interface}{user\+\_\+interface}} , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd\+\_\+vel the velocity equal to zero if the user decides to stop the robot. 
+
+\begin{DoxyAuthor}{Author}
+Girardo\+Ermanno 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2021 
+\end{DoxyDate}
 
 
 \doxysubsection{Function Documentation}
@@ -44,11 +61,3 @@ main funciton of the state\+\_\+machine node\+: -\/create the service at /user\+
 {\footnotesize\ttfamily bool user\+\_\+interface (\begin{DoxyParamCaption}\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Request \&}]{req,  }\item[{rt2\+\_\+assignment1\+::\+Command\+::\+Response \&}]{res }\end{DoxyParamCaption})}
 
 function that user interface server use in order to modify the value of the variable start if the client makes the request to \textquotesingle{}start\textquotesingle{} this function set to true the start variable Otherwise is the to false 
-
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}\label{state__machine_8cpp_ab376b87f96a574a793c03c53e75afec8}} 
-\index{state\_machine.cpp@{state\_machine.cpp}!start@{start}}
-\index{start@{start}!state\_machine.cpp@{state\_machine.cpp}}
-\doxysubsubsection{\texorpdfstring{start}{start}}
-{\footnotesize\ttfamily bool start = false}
-

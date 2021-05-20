@@ -1,3 +1,19 @@
+"""
+/file  go_to_point.py
+
+/brief action server used to reach the position of a random target. In this script is implemented the behaviour of an Finite State Machine in order to:
+align the robot with the goal
+move the robot in the direction of the goal
+once the goal is reached the robot align its orientation with the goal's orientation This node uses a publisher in order to publish the velocity of the robot
+on /cmd_vel topic and it uses a subscriber in order to check the robot's position on /odom topic.
+
+/author Girardo Ermanno
+
+/date May 2021
+
+"""
+
+
 import rospy
 import actionlib
 import rt2_assignment1.msg

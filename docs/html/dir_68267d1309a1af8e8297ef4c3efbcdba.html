@@ -73,8 +73,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 Files</h2></td></tr>
 <tr class="memitem:position__service_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position__service_8cpp.html">position_service.cpp</a></td></tr>
+<tr class="memdesc:position__service_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval [min,max] via custom service message RandomPosition.srv. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:state__machine_8cpp"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="state__machine_8cpp.html">state_machine.cpp</a></td></tr>
+<tr class="memdesc:state__machine_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="state__machine_8cpp.html" title="state_machine.cpp is a node wich communicats with all other nodes, in particular: 1) a client is gene...">state_machine.cpp</a> is a node wich communicats with all other nodes, in particular: 1) a client is generated in order to set the fields of the random target and send the request to position_service 2) The node implements a function callback of the <a class="el" href="namespaceuser__interface.html">user_interface</a> , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd_vel the velocity equal to zero if the user decides to stop the robot. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

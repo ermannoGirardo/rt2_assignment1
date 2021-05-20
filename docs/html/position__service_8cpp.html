@@ -71,6 +71,9 @@ $(function() {
 <div class="title">position_service.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval [min,max] via custom service message RandomPosition.srv.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;ros/ros.h&quot;</code><br />
 <code>#include &quot;rt2_assignment1/RandomPosition.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -78,7 +81,7 @@ Include dependency graph for position_service.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="position__service_8cpp__incl.png" border="0" usemap="#src_2position__service_8cpp" alt=""/></div>
 <map name="src_2position__service_8cpp" id="src_2position__service_8cpp">
-<area shape="rect" title=" " alt="" coords="50,5,229,32"/>
+<area shape="rect" title="Simple server that has the scope of generate a random target. This node infact generate three random ..." alt="" coords="50,5,229,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,84,107"/>
 <area shape="rect" title=" " alt="" coords="109,80,362,107"/>
 </map>
@@ -86,99 +89,21 @@ Include dependency graph for position_service.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a10f83119b77a8fbd085a5550955f85ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position__service_8cpp.html#a10f83119b77a8fbd085a5550955f85ff">randMToN</a> (double M, double N)</td></tr>
+<tr class="memitem:a10f83119b77a8fbd085a5550955f85ff"><td class="memItemLeft" align="right" valign="top"><a id="a10f83119b77a8fbd085a5550955f85ff"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>randMToN</b> (double M, double N)</td></tr>
 <tr class="separator:a10f83119b77a8fbd085a5550955f85ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab65b9ff5368189ad34fe4989d50742e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position__service_8cpp.html#ab65b9ff5368189ad34fe4989d50742e4">myrandom</a> (rt2_assignment1::RandomPosition::Request &amp;req, rt2_assignment1::RandomPosition::Response &amp;res)</td></tr>
+<tr class="memitem:ab65b9ff5368189ad34fe4989d50742e4"><td class="memItemLeft" align="right" valign="top"><a id="ab65b9ff5368189ad34fe4989d50742e4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>myrandom</b> (rt2_assignment1::RandomPosition::Request &amp;req, rt2_assignment1::RandomPosition::Response &amp;res)</td></tr>
 <tr class="separator:ab65b9ff5368189ad34fe4989d50742e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="position__service_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top"><a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab65b9ff5368189ad34fe4989d50742e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab65b9ff5368189ad34fe4989d50742e4">&#9670;&nbsp;</a></span>myrandom()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool myrandom </td>
-          <td>(</td>
-          <td class="paramtype">rt2_assignment1::RandomPosition::Request &amp;&#160;</td>
-          <td class="paramname"><em>req</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">rt2_assignment1::RandomPosition::Response &amp;&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a10f83119b77a8fbd085a5550955f85ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10f83119b77a8fbd085a5550955f85ff">&#9670;&nbsp;</a></span>randMToN()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double randMToN </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>M</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>N</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval [min,max] via custom service message RandomPosition.srv. </p>
+<dl class="section author"><dt>Author</dt><dd>Girardo Ermanno </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>May 2021 </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

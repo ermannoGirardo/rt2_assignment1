@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lb_5fa_14',['lb_a',['../namespacego__to__point.html#afecad4058844db05d8321199e25b4498',1,'go_to_point']]]
+  ['yaw_5fprecision_5f_6',['yaw_precision_',['../namespacego__to__point.html#a67f95834f0959feb3facd17bc7fa2b38',1,'go_to_point']]]
 ];
