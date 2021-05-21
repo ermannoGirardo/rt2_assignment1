@@ -1,3 +1,5 @@
+  
+#! /usr/bin/env python
 """
 /file  go_to_point.py
 
