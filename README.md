@@ -44,6 +44,11 @@ In this branch you can find two nodes in python and two nodes in C++:
 In the notebook folder you can find User_Interface.ipynb file.
 In particular this file is the graphical user interface developed with Jupiter Notebook.
 Is also delevoped real-time graphs of the robot behavior.
+In order to start the notebook execute:
+"""
+path/to/ros_ws/src/rt2_assignment1/notebooks$ jupyter notebook --allow-root --ip 0.0.0.0
+"""
+Then open web browser at localhost:8888 and select the notebook.
 ## Requirements
 * starting / stopping the robot “random position” behaviour by using two Buttons 
 * setting the linear and angular velocity by using two Sliders-directly controlling the robot movements by using 5 Buttons: forward, turn right, backward, turn left, stop
