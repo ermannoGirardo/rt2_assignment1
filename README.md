@@ -59,7 +59,7 @@ Then open web browser at localhost:8888 and select the notebook.
 * an xy graph showing the robot’s position and the orientation 
 
 # Documentation
-Doxygen documentation has been developed.
+Sphinx documentation has been developed.
 You can find it into docs folder
   
 # Launch files
