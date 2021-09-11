@@ -138,6 +138,8 @@ def fix_yaw(des_pos):
 #  
 #   /param des_pos(Point): desired position to compute the desired yaw
 ##
+
+    global kp_a
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
     rospy.loginfo(err_yaw)
@@ -163,6 +165,8 @@ def go_straight_ahead(des_pos):
 #
 #   /param des_pos(Point): desired x y position
 ##
+
+    global kp_a, kp_d
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = desired_yaw - yaw_
     err_pos = math.sqrt(pow(des_pos.y - position_.y, 2) +
@@ -172,7 +176,7 @@ def go_straight_ahead(des_pos):
 
     if err_pos > dist_precision_:
         twist_msg = Twist()
-        twist_msg.linear.x = 0.3
+        twist_msg.linear.x = kp_d
         if twist_msg.linear.x > ub_d:
            twist_msg.linear.x = ub_d
 
@@ -193,6 +197,8 @@ def fix_final_yaw(des_yaw):
 #   
 #   /param des_yaw(float): desired yaw
 ## 
+
+    global kp_a
     err_yaw = normalize_angle(des_yaw - yaw_)
     rospy.loginfo(err_yaw)
     twist_msg = Twist()
@@ -230,7 +236,7 @@ def go_to_point(goal):
 #   /param goal (PoseActionGoal): x,y,theta coordinates
 #   of the goal pose
 ##
-    global server
+    global server, state_
     ##instanciate the message for position result
     result=rt2_assignment1.msg.PositionResult()
     desired_position = Point()
