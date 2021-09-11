@@ -52,7 +52,8 @@ path/to/ros_ws/src/rt2_assignment1/notebooks$ jupyter notebook --allow-root --ip
 Then open web browser at localhost:8888 and select the notebook.
 ## Requirements
 * starting / stopping the robot “random position” behaviour by using two Buttons 
-* setting the linear and angular velocity by using two Sliders-directly controlling the robot movements by using 5 Buttons: forward, turn right, backward, turn left, stop
+* setting the linear and angular velocity by using two sliders-
+* directly controlling the robot movements by using 5 Buttons: forward, turn right, backward, turn left, stop
 ### Concerning the graphs
 * a line plot for visualizing cmd_vel vs. actual velocity for linear and angular velocity
 * a bar plot displaying the number of reached targets and cancelled targets
