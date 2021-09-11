@@ -62,10 +62,7 @@ Then open web browser at localhost:8888 and select the notebook.
 # Documentation
 Sphinx documentation has been developed.
 You can find it into docs folder
-<<<<<<< HEAD
 
-=======
->>>>>>> 8af50b52c4c607a34d8688888d4540272b0392d0
   
 # Launch files
 In the folder launch you can find two launch file:
