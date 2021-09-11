@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceuser__interface" kind="namespace" language="Python">
+    <compoundname>user_interface</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceuser__interface_1ac26bdb296b6776907b72c17ce5a1b24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def user_interface.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="scripts/user_interface.py" line="22" column="1" bodyfile="scripts/user_interface.py" bodystart="22" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim> .. module:: go_to_point
+:platform: Unix
+:synopsis: Implement an user interface in order to start or stop the robot
+ .. moduleauthor:: Carmine Recchiuto  &lt;carmine.recchiuto@dibris.unige.it&gt;, Ermanno Girardo &lt;s4506472@studenti.unige.it&gt;
+ 
+  Client: &lt;BR&gt;
+ /user_interface
+
+  Implements an user interface in order to start or stop the robot. 
+  In particular it is a client that reads the user command and via custom
+  service message Command.srv send it to the state_machine node. 
+  When the user press 1 the node sends a &quot;start&quot; messagge to the user_interface server.
+  Instead if the user press 0 the node the function of go_to_point is stopped and in state_machine
+  node the goal is cancelled, setting also the velocity to zero (to stop the robot)</verbatim> </para>
+    </detaileddescription>
+    <location file="scripts/user_interface.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

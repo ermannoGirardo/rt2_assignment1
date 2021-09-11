@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>First<sp/>Assignment<sp/>of<sp/>the<sp/>Research<sp/>Track<sp/>2<sp/>course<sp/>(Robotics<sp/>Engineering<sp/>/<sp/>JEMARO,<sp/>Unige)<sp/>Ermanno<sp/>Girardo<sp/>S4506472</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Requirements<sp/>of<sp/>action<sp/>branch</highlight></codeline>
+<codeline><highlight class="normal">Localisation<sp/>and<sp/>path<sp/>planning<sp/>of<sp/>a<sp/>non-holonomic<sp/>robot<sp/>in<sp/>an<sp/>environment<sp/>with<sp/>Gazebo<sp/>and<sp/>Coppelia<sp/>simulators.</highlight></codeline>
+<codeline><highlight class="normal">Taking<sp/>the<sp/>code<sp/>in<sp/>the<sp/>main<sp/>branch<sp/>i<sp/>want<sp/>to<sp/>replace<sp/>the<sp/>go_to_point<sp/>service<sp/>with<sp/>an<sp/>action<sp/>service<sp/>by<sp/>custom<sp/>action<sp/>message<sp/>Position.action.</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>way<sp/>the<sp/>user<sp/>can<sp/>stop<sp/>the<sp/>robot<sp/>in<sp/>whatever<sp/>place<sp/>wants,<sp/>instead<sp/>of<sp/>stopping<sp/>the<sp/>robot<sp/>once<sp/>it<sp/>reaches<sp/>the<sp/>target<sp/>goal.</highlight></codeline>
+<codeline><highlight class="normal">Infact<sp/>implementing<sp/>the<sp/>action<sp/>service<sp/>is<sp/>possible<sp/>to<sp/>cancel<sp/>the<sp/>goal<sp/>once<sp/>the<sp/>user<sp/>press<sp/>0<sp/>and<sp/>set<sp/>the<sp/>velocity<sp/>of<sp/>the<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal">equal<sp/>to<sp/>zero<sp/>in<sp/>order<sp/>to<sp/>stop<sp/>it.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>What<sp/>you<sp/>can<sp/>find<sp/>in<sp/>this<sp/>branch<sp/></highlight></codeline>
+<codeline><highlight class="normal">In<sp/>this<sp/>branch<sp/>you<sp/>can<sp/>find<sp/>two<sp/>nodes<sp/>in<sp/>python<sp/>and<sp/>two<sp/>nodes<sp/>in<sp/>C++:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>go_to_point.py<sp/>is<sp/>an<sp/>action<sp/>server<sp/>used<sp/>to<sp/>reach<sp/>the<sp/>position<sp/>of<sp/>a<sp/>random<sp/>target.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>In<sp/>this<sp/>script<sp/>is<sp/>implemented<sp/>the<sp/>behaviour<sp/>of<sp/>an<sp/>Finite<sp/>State<sp/>Machine<sp/>in<sp/>order<sp/>to:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>1)<sp/>align<sp/>the<sp/>robot<sp/>with<sp/>the<sp/>goal</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>2)<sp/>move<sp/>the<sp/>robot<sp/>in<sp/>the<sp/>direction<sp/>of<sp/>the<sp/>goal</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>3)<sp/>once<sp/>the<sp/>goal<sp/>is<sp/>reached<sp/>the<sp/>robot<sp/>align<sp/>its<sp/>orientation<sp/>with<sp/>the<sp/>goal&apos;s<sp/>orientation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>This<sp/>node<sp/>uses<sp/>a<sp/>publisher<sp/>in<sp/>order<sp/>to<sp/>publish<sp/>the<sp/>velocity<sp/>of<sp/>the<sp/>robot<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>on<sp/>/cmd_vel<sp/>topic<sp/>and<sp/>it<sp/>uses<sp/>a<sp/>subscriber<sp/>in<sp/>order<sp/>to<sp/>check<sp/>the<sp/>robot&apos;s<sp/>position<sp/>on<sp/>/odom<sp/>topic.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>user_interface.py<sp/>implements<sp/>an<sp/>user<sp/>interface<sp/>in<sp/>order<sp/>to<sp/>start<sp/>or<sp/>stop<sp/>the<sp/>robot.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>In<sp/>particular<sp/>it<sp/>is<sp/>a<sp/>client<sp/>that<sp/>reads<sp/>the<sp/>user<sp/>command<sp/>and<sp/>via<sp/>custom<sp/>service<sp/>message<sp/>Command.srv<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>send<sp/>it<sp/>to<sp/>the<sp/>state_machine<sp/>node.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>When<sp/>the<sp/>user<sp/>press<sp/>1<sp/>the<sp/>node<sp/>sends<sp/>a<sp/>&quot;start&quot;<sp/>messagge<sp/>to<sp/>the<sp/>user_interface<sp/>server.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Instead<sp/>if<sp/>the<sp/>user<sp/>press<sp/>0<sp/>the<sp/>node<sp/>the<sp/>function<sp/>of<sp/>go_to_point<sp/>is<sp/>stopped<sp/>and<sp/>in<sp/>state_machine<sp/>node<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>goal<sp/>is<sp/>cancelled,<sp/>setting<sp/>also<sp/>the<sp/>velocity<sp/>to<sp/>zero.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>position_service.cpp<sp/>is<sp/>a<sp/>simple<sp/>server<sp/>that<sp/>has<sp/>the<sp/>scope<sp/>of<sp/>generate<sp/>a<sp/>random<sp/>target.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>This<sp/>node<sp/>infact<sp/>generate<sp/>three<sp/>random<sp/>components<sp/>(x<sp/>and<sp/>y<sp/>components<sp/>for<sp/>the<sp/>position,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>theta<sp/>component<sp/>for<sp/>the<sp/>orientation)<sp/>in<sp/>a<sp/>specified<sp/>interval<sp/>[min,max]<sp/>via<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>custom<sp/>service<sp/>message<sp/>RandomPosition.srv.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>state_machine.cpp<sp/>is<sp/>a<sp/>node<sp/>wich<sp/>communicates<sp/>with<sp/>all<sp/>other<sp/>nodes,<sp/>in<sp/>particular:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>1)<sp/>a<sp/>client<sp/>is<sp/>generated<sp/>in<sp/>order<sp/>to<sp/>set<sp/>the<sp/>fields<sp/>of<sp/>the<sp/>random<sp/>target<sp/>and<sp/>send<sp/>the<sp/>request</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>to<sp/>position_service</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>2)<sp/>The<sp/>node<sp/>implements<sp/>a<sp/>function<sp/>callback<sp/>of<sp/>the<sp/>user_interface<sp/>,<sp/>in<sp/>order<sp/>to<sp/>check<sp/>the<sp/>request<sp/>done</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>by<sp/>the<sp/>user,<sp/>setting<sp/>properly<sp/>the<sp/>value<sp/>of<sp/>the<sp/>variable<sp/>start.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>3)<sp/>Implements<sp/>an<sp/>action<sp/>client<sp/>in<sp/>order<sp/>to<sp/>cancel<sp/>the<sp/>goal<sp/>if<sp/>the<sp/>user<sp/>decides<sp/>to<sp/>stop<sp/>the<sp/>robot.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>4)<sp/>Publish<sp/>on<sp/>topic<sp/>/cmd_vel<sp/>the<sp/>velocity<sp/>equal<sp/>to<sp/>zero<sp/>if<sp/>the<sp/>user<sp/>decides<sp/>to<sp/>stop<sp/>the<sp/>robot.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>A<sp/>coppelia<sp/>scene<sp/>in<sp/>order<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>also<sp/>in<sp/>Coppelia<sp/>(Vrep).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Launch<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>folder<sp/>launch<sp/>you<sp/>can<sp/>find<sp/>two<sp/>launch<sp/>file:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>sim.launch<sp/>starts<sp/>the<sp/>simulation<sp/>launching<sp/>Gazebo<sp/>simulator,<sp/>with<sp/>an<sp/>empty<sp/>map<sp/>and<sp/>loading<sp/>the<sp/>Universal<sp/>Robot<sp/>desciption<sp/>on<sp/>it.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>It<sp/>run<sp/>all<sp/>the<sp/>four<sp/>nodes<sp/>above<sp/>described.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>simVrep.launch<sp/>starts<sp/>only<sp/>the<sp/>four<sp/>nodes<sp/>described<sp/>above<sp/>without<sp/>launching<sp/>Gazebo<sp/>simulator<sp/>and<sp/>load<sp/>the<sp/>URDF<sp/>on<sp/>the<sp/>ROS<sp/>server.</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>in<sp/>Gazebo</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>order<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>on<sp/>Gazebo<sp/>copy<sp/>and<sp/>paste<sp/>the<sp/>following<sp/>command<sp/>on<sp/>Ubuntu<sp/>shall</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>sim.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![GazeboSimGraph](https://user-images.githubusercontent.com/48509825/118884149-628ff800-b8f6-11eb-8165-a19e41745097.png)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>on<sp/>Vrep</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>order<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>on<sp/>Vrep:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">https://www.coppeliarobotics.com/downloads</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Download<sp/>the<sp/>education<sp/>version<sp/>zip<sp/>and<sp/>unzip<sp/>it,<sp/>should<sp/>be<sp/>something<sp/>as<sp/>CoppeliaSim_Edu_V4_2_0_Ubuntu20_04.</highlight></codeline>
+<codeline><highlight class="normal">Then<sp/>move<sp/>into<sp/>this<sp/>folder<sp/>and<sp/>change<sp/>the<sp/>permission<sp/>of<sp/>the<sp/>coppeliaSim.sh<sp/>by<sp/>digit<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">chmod<sp/>+x<sp/>coppeliaSim.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Then<sp/>in<sp/>order<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>open<sp/>another<sp/>terminal<sp/>and<sp/>run<sp/>the<sp/>ros<sp/>master<sp/>then<sp/>launch<sp/>the<sp/>executable<sp/>of<sp/>Coppelia</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">roscore<sp/>&amp;</highlight></codeline>
+<codeline><highlight class="normal">./coppeliaSim.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Check<sp/>if<sp/>ROS<sp/>is<sp/>correctly<sp/>sourced<sp/>before<sp/>proceeds</highlight></codeline>
+<codeline><highlight class="normal">Then<sp/>you<sp/>must<sp/>open<sp/>the<sp/>scene<sp/>coppeliaScene.ttt,<sp/>you<sp/>should<sp/>see<sp/>a<sp/>pioner<sp/>mobile<sp/>robot<sp/>in<sp/>the<sp/>centre<sp/>of<sp/>the<sp/>map</highlight></codeline>
+<codeline><highlight class="normal">Now<sp/>to<sp/>start<sp/>the<sp/>simulation<sp/>open<sp/>another<sp/>terminal,<sp/>move<sp/>to<sp/>the<sp/>ros<sp/>workspace<sp/>and<sp/>digit<sp/>the<sp/>follow<sp/>command<sp/>and<sp/>start<sp/>the<sp/>simulation<sp/>on<sp/>Coppelia.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>simVrep.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>press<sp/>1<sp/>in<sp/>order<sp/>to<sp/>start<sp/>moving<sp/>the<sp/>robot<sp/>you<sp/>must<sp/>see<sp/>the<sp/>pioner<sp/>moves<sp/>to<sp/>reach<sp/>the<sp/>goal<sp/>position.</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>you<sp/>press<sp/>0<sp/>you<sp/>must<sp/>see<sp/>the<sp/>pioner<sp/>stops<sp/>in<sp/>the<sp/>current<sp/>position.</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>the<sp/>simulation<sp/>is<sp/>too<sp/>slow<sp/>click<sp/>on<sp/>the<sp/>hare<sp/>on<sp/>the<sp/>top.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![VrepSimGraph](https://user-images.githubusercontent.com/48509825/118884208-72a7d780-b8f6-11eb-8146-c53e642f9187.png)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

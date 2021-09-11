@@ -1,0 +1,26 @@
+\hypertarget{namespaceuser__interface}{}\doxysection{user\+\_\+interface Namespace Reference}
+\label{namespaceuser__interface}\index{user\_interface@{user\_interface}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceuser__interface_ac26bdb296b6776907b72c17ce5a1b24a}\label{namespaceuser__interface_ac26bdb296b6776907b72c17ce5a1b24a}} 
+def {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb} .. module:: go_to_point
+:platform: Unix
+:synopsis: Implement an user interface in order to start or stop the robot
+ .. moduleauthor:: Carmine Recchiuto  <carmine.recchiuto@dibris.unige.it>, Ermanno Girardo <s4506472@studenti.unige.it>
+ 
+  Client: <BR>
+ /user_interface
+
+  Implements an user interface in order to start or stop the robot. 
+  In particular it is a client that reads the user command and via custom
+  service message Command.srv send it to the state_machine node. 
+  When the user press 1 the node sends a "start" messagge to the user_interface server.
+  Instead if the user press 0 the node the function of go_to_point is stopped and in state_machine
+  node the goal is cancelled, setting also the velocity to zero (to stop the robot)\end{DoxyVerb}
+ 
