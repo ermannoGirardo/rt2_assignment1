@@ -1,0 +1,445 @@
+\hypertarget{namespacego__to__point}{}\doxysection{go\+\_\+to\+\_\+point Namespace Reference}
+\label{namespacego__to__point}\index{go\_to\_point@{go\_to\_point}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacego__to__point_a9aec3911a70d3d13688b2c283d919dd0}{clbk\+\_\+slider}} (msg\+\_\+slider)
+\item 
+def \mbox{\hyperlink{namespacego__to__point_a36304a9f313b0579f7fc69fa01695524}{clbk\+\_\+odom}} (msg)
+\item 
+def \mbox{\hyperlink{namespacego__to__point_a31ee48e5cae36821049b572a96b7c8be}{change\+\_\+state}} (state)
+\item 
+def \mbox{\hyperlink{namespacego__to__point_ac688bb56fa84763ea2edefc30cae032a}{normalize\+\_\+angle}} (\mbox{\hyperlink{namespacego__to__point_a8980aeeb4c665434719cc9fef0268505}{angle}})
+\item 
+def \mbox{\hyperlink{namespacego__to__point_a9c3011a3065fcbefcc1c5ad8c9979669}{fix\+\_\+yaw}} (des\+\_\+pos)
+\item 
+def \mbox{\hyperlink{namespacego__to__point_ac8579665c0fbf665f734476554fac37d}{go\+\_\+straight\+\_\+ahead}} (des\+\_\+pos)
+\item 
+def \mbox{\hyperlink{namespacego__to__point_a4a406386ca62830c19c93949e923f7bd}{fix\+\_\+final\+\_\+yaw}} (\mbox{\hyperlink{namespacego__to__point_afb6f136299609da8342072667ac99fc3}{des\+\_\+yaw}})
+\item 
+def \mbox{\hyperlink{namespacego__to__point_ac2587220a4ac9c845bc9c5b0b45d5835}{done}} ()
+\item 
+def \mbox{\hyperlink{namespacego__to__point_a2203d17b7e563bee20ed4c988548df45}{go\+\_\+to\+\_\+point}} (goal)
+\item 
+def \mbox{\hyperlink{namespacego__to__point_ab92bd6db1ec323a4d795ed6cb40aebe1}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacego__to__point_a91dbaab25e6080f6b5dbf82cac6ce75c}{position\+\_\+}} = Point()
+\begin{DoxyCompactList}\small\item\em robot state variables point used to store the actual position \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacego__to__point_aef2e9fd6df834ec234239da39481a0c7}{feedback}} = rt2\+\_\+assignment1.\+msg.\+Position\+Feedback()
+\item 
+\mbox{\hyperlink{namespacego__to__point_a98ce19d0c843fd1cb438e6630ae107c2}{result}} = rt2\+\_\+assignment1.\+msg.\+Position\+Result()
+\begin{DoxyCompactList}\small\item\em Function used to action server in order to allow the robot to reach the correct target position Set an appropriate behaviour depending on the current robot state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacego__to__point_a6d53ec90cd5e46f57f098363f19b2019}{yaw\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em yaw angle set to 0 as default \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacego__to__point_acf4a5bffa4335b456ad91661efa8ae4b}{state\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em state set to 0 as default \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacego__to__point_a57b4090d0abcbcf0bfa2bcb9329d3036}{pub\+\_\+}} = None
+\begin{DoxyCompactList}\small\item\em publisher that publish to cmd\+\_\+vel \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacego__to__point_a67f95834f0959feb3facd17bc7fa2b38}{yaw\+\_\+precision\+\_\+}} = math.\+pi / 9
+\begin{DoxyCompactList}\small\item\em parameters for control \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacego__to__point_af74ccf49164d0478ca8343e2031d5813}{yaw\+\_\+precision\+\_\+2\+\_\+}} = math.\+pi / 90
+\item 
+float \mbox{\hyperlink{namespacego__to__point_a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5}{dist\+\_\+precision\+\_\+}} = 0.\+1
+\begin{DoxyCompactList}\small\item\em distance precision from goal allowed \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacego__to__point_a4d46f473c423292291ed8573b782a942}{kp\+\_\+a}} = -\/3.\+0
+\begin{DoxyCompactList}\small\item\em angular proportional constant \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacego__to__point_afbc27742ae9a0386ea0a8129cadab309}{kp\+\_\+d}} = 0.\+2
+\begin{DoxyCompactList}\small\item\em linear proportional constant \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacego__to__point_acb4e14986fafe5cb73bb8ad0c178869d}{ub\+\_\+a}} = 0.\+6
+\begin{DoxyCompactList}\small\item\em upper bound angular velocity \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacego__to__point_afecad4058844db05d8321199e25b4498}{lb\+\_\+a}} = -\/0.\+5
+\begin{DoxyCompactList}\small\item\em lower bound angular velocity \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{namespacego__to__point_a16c473b9e717200c483d18e66b48152a}{ub\+\_\+d}} = 0.\+6
+\begin{DoxyCompactList}\small\item\em upper bound linear velociry \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacego__to__point_a9af800eec02eb94f70ee4ac6fbea1ecd}{server}} = None
+\begin{DoxyCompactList}\small\item\em action server \end{DoxyCompactList}\item 
+tuple \mbox{\hyperlink{namespacego__to__point_af07d5616dcc86c42f73b6a21dda5f29f}{quaternion}}
+\item 
+\mbox{\hyperlink{namespacego__to__point_a22ae82a27c7d4ec081aec5fae83837be}{euler}} = transformations.\+euler\+\_\+from\+\_\+quaternion(\mbox{\hyperlink{namespacego__to__point_af07d5616dcc86c42f73b6a21dda5f29f}{quaternion}})
+\item 
+\mbox{\hyperlink{namespacego__to__point_a8980aeeb4c665434719cc9fef0268505}{angle}} = angle -\/ (2 $\ast$ math.\+pi $\ast$ angle) / (math.\+fabs(angle))
+\begin{DoxyCompactList}\small\item\em function used to normalize the angle \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacego__to__point_ae0061292741c7ad2a80f6bf7d8d7a76c}{desired\+\_\+yaw}} = math.\+atan2(des\+\_\+pos.\+y -\/ position\+\_\+.\+y, des\+\_\+pos.\+x -\/ position\+\_\+.\+x)
+\begin{DoxyCompactList}\small\item\em function used to orient the robot in a desired direction \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacego__to__point_a08a0546d5e969dabc96a01fc27212d9d}{err\+\_\+yaw}} = \mbox{\hyperlink{namespacego__to__point_ac688bb56fa84763ea2edefc30cae032a}{normalize\+\_\+angle}}(\mbox{\hyperlink{namespacego__to__point_ae0061292741c7ad2a80f6bf7d8d7a76c}{desired\+\_\+yaw}} -\/ \mbox{\hyperlink{namespacego__to__point_a6d53ec90cd5e46f57f098363f19b2019}{yaw\+\_\+}})
+\begin{DoxyCompactList}\small\item\em Once the goal (x,y) is achieved the function orients the robot with the goal orientation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacego__to__point_aaa0345cea167437ea6a05b02470bafe2}{twist\+\_\+msg}} = Twist()
+\begin{DoxyCompactList}\small\item\em Stop the robot Set the linear and the angular velocity to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacego__to__point_a2fd68a76b8583598a4bceccdeae5d73b}{z}}
+\item 
+\mbox{\hyperlink{namespacego__to__point_a2e88fa298379599e5382bbfe30edf0af}{err\+\_\+pos}}
+\item 
+\mbox{\hyperlink{namespacego__to__point_a328c9a3bb9322f150f2e67371cd73306}{x}}
+\item 
+\mbox{\hyperlink{namespacego__to__point_a803f37d88a98fcb432b07c5f1366d924}{desired\+\_\+position}} = Point()
+\item 
+\mbox{\hyperlink{namespacego__to__point_ac372e1a492f9aa66d29f365cc1c57d8c}{y}}
+\item 
+\mbox{\hyperlink{namespacego__to__point_afb6f136299609da8342072667ac99fc3}{des\+\_\+yaw}} = goal.\+theta
+\item 
+bool \mbox{\hyperlink{namespacego__to__point_a12f30421f55ca239a46a9c34bd416c26}{success}} = True
+\item 
+\mbox{\hyperlink{namespacego__to__point_a856d9759806722969e57291d2dc65d5a}{sub\+\_\+odom}} = rospy.\+Subscriber(\textquotesingle{}/odom\textquotesingle{}, Odometry, \mbox{\hyperlink{namespacego__to__point_a36304a9f313b0579f7fc69fa01695524}{clbk\+\_\+odom}})
+\item 
+\mbox{\hyperlink{namespacego__to__point_a45bed7a567c8e984e563c11f544e9737}{sub\+\_\+slider}} = rospy.\+Subscriber(\textquotesingle{}/slider\textquotesingle{},Twist, \mbox{\hyperlink{namespacego__to__point_a9aec3911a70d3d13688b2c283d919dd0}{clbk\+\_\+slider}})
+\item 
+\mbox{\hyperlink{namespacego__to__point_ae54b9db8e838e00fa1addf56c511d670}{rate}} = rospy.\+Rate(20)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacego__to__point_a31ee48e5cae36821049b572a96b7c8be}\label{namespacego__to__point_a31ee48e5cae36821049b572a96b7c8be}} 
+\index{go\_to\_point@{go\_to\_point}!change\_state@{change\_state}}
+\index{change\_state@{change\_state}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{change\_state()}{change\_state()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_a36304a9f313b0579f7fc69fa01695524}\label{namespacego__to__point_a36304a9f313b0579f7fc69fa01695524}} 
+\index{go\_to\_point@{go\_to\_point}!clbk\_odom@{clbk\_odom}}
+\index{clbk\_odom@{clbk\_odom}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{clbk\_odom()}{clbk\_odom()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+clbk\+\_\+odom (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_a9aec3911a70d3d13688b2c283d919dd0}\label{namespacego__to__point_a9aec3911a70d3d13688b2c283d919dd0}} 
+\index{go\_to\_point@{go\_to\_point}!clbk\_slider@{clbk\_slider}}
+\index{clbk\_slider@{clbk\_slider}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{clbk\_slider()}{clbk\_slider()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+clbk\+\_\+slider (\begin{DoxyParamCaption}\item[{}]{msg\+\_\+slider }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_ac2587220a4ac9c845bc9c5b0b45d5835}\label{namespacego__to__point_ac2587220a4ac9c845bc9c5b0b45d5835}} 
+\index{go\_to\_point@{go\_to\_point}!done@{done}}
+\index{done@{done}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_a4a406386ca62830c19c93949e923f7bd}\label{namespacego__to__point_a4a406386ca62830c19c93949e923f7bd}} 
+\index{go\_to\_point@{go\_to\_point}!fix\_final\_yaw@{fix\_final\_yaw}}
+\index{fix\_final\_yaw@{fix\_final\_yaw}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{fix\_final\_yaw()}{fix\_final\_yaw()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+fix\+\_\+final\+\_\+yaw (\begin{DoxyParamCaption}\item[{}]{des\+\_\+yaw }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_a9c3011a3065fcbefcc1c5ad8c9979669}\label{namespacego__to__point_a9c3011a3065fcbefcc1c5ad8c9979669}} 
+\index{go\_to\_point@{go\_to\_point}!fix\_yaw@{fix\_yaw}}
+\index{fix\_yaw@{fix\_yaw}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{fix\_yaw()}{fix\_yaw()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+fix\+\_\+yaw (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_ac8579665c0fbf665f734476554fac37d}\label{namespacego__to__point_ac8579665c0fbf665f734476554fac37d}} 
+\index{go\_to\_point@{go\_to\_point}!go\_straight\_ahead@{go\_straight\_ahead}}
+\index{go\_straight\_ahead@{go\_straight\_ahead}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{go\_straight\_ahead()}{go\_straight\_ahead()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+go\+\_\+straight\+\_\+ahead (\begin{DoxyParamCaption}\item[{}]{des\+\_\+pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_a2203d17b7e563bee20ed4c988548df45}\label{namespacego__to__point_a2203d17b7e563bee20ed4c988548df45}} 
+\index{go\_to\_point@{go\_to\_point}!go\_to\_point@{go\_to\_point}}
+\index{go\_to\_point@{go\_to\_point}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{go\_to\_point()}{go\_to\_point()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+go\+\_\+to\+\_\+point (\begin{DoxyParamCaption}\item[{}]{goal }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_ab92bd6db1ec323a4d795ed6cb40aebe1}\label{namespacego__to__point_ab92bd6db1ec323a4d795ed6cb40aebe1}} 
+\index{go\_to\_point@{go\_to\_point}!main@{main}}
+\index{main@{main}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacego__to__point_ac688bb56fa84763ea2edefc30cae032a}\label{namespacego__to__point_ac688bb56fa84763ea2edefc30cae032a}} 
+\index{go\_to\_point@{go\_to\_point}!normalize\_angle@{normalize\_angle}}
+\index{normalize\_angle@{normalize\_angle}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{normalize\_angle()}{normalize\_angle()}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+normalize\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{angle }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacego__to__point_a8980aeeb4c665434719cc9fef0268505}\label{namespacego__to__point_a8980aeeb4c665434719cc9fef0268505}} 
+\index{go\_to\_point@{go\_to\_point}!angle@{angle}}
+\index{angle@{angle}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+angle = angle -\/ (2 $\ast$ math.\+pi $\ast$ angle) / (math.\+fabs(angle))}
+
+
+
+function used to normalize the angle 
+
+/param angle(float)\+: angle to normalize /return\+: angle normalized \mbox{\Hypertarget{namespacego__to__point_afb6f136299609da8342072667ac99fc3}\label{namespacego__to__point_afb6f136299609da8342072667ac99fc3}} 
+\index{go\_to\_point@{go\_to\_point}!des\_yaw@{des\_yaw}}
+\index{des\_yaw@{des\_yaw}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{des\_yaw}{des\_yaw}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+des\+\_\+yaw = goal.\+theta}
+
+\mbox{\Hypertarget{namespacego__to__point_a803f37d88a98fcb432b07c5f1366d924}\label{namespacego__to__point_a803f37d88a98fcb432b07c5f1366d924}} 
+\index{go\_to\_point@{go\_to\_point}!desired\_position@{desired\_position}}
+\index{desired\_position@{desired\_position}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{desired\_position}{desired\_position}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+desired\+\_\+position = Point()}
+
+\mbox{\Hypertarget{namespacego__to__point_ae0061292741c7ad2a80f6bf7d8d7a76c}\label{namespacego__to__point_ae0061292741c7ad2a80f6bf7d8d7a76c}} 
+\index{go\_to\_point@{go\_to\_point}!desired\_yaw@{desired\_yaw}}
+\index{desired\_yaw@{desired\_yaw}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{desired\_yaw}{desired\_yaw}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+desired\+\_\+yaw = math.\+atan2(des\+\_\+pos.\+y -\/ position\+\_\+.\+y, des\+\_\+pos.\+x -\/ position\+\_\+.\+x)}
+
+
+
+function used to orient the robot in a desired direction 
+
+Once robot is aligned this function drive the robot toward the goal.
+
+The function is used to orient the robot toward the goal
+
+/param des\+\_\+pos(\+Point)\+: desired position to compute the desired yaw
+
+Set the linear and the angular velocity depending on the distance to the goal pose.
+
+/param des\+\_\+pos(\+Point)\+: desired x y position \mbox{\Hypertarget{namespacego__to__point_a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5}\label{namespacego__to__point_a6a1e4eb20ebd4fce0fc56b0ebfd7a8d5}} 
+\index{go\_to\_point@{go\_to\_point}!dist\_precision\_@{dist\_precision\_}}
+\index{dist\_precision\_@{dist\_precision\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{dist\_precision\_}{dist\_precision\_}}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point.\+dist\+\_\+precision\+\_\+ = 0.\+1}
+
+
+
+distance precision from goal allowed 
+
+\mbox{\Hypertarget{namespacego__to__point_a2e88fa298379599e5382bbfe30edf0af}\label{namespacego__to__point_a2e88fa298379599e5382bbfe30edf0af}} 
+\index{go\_to\_point@{go\_to\_point}!err\_pos@{err\_pos}}
+\index{err\_pos@{err\_pos}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{err\_pos}{err\_pos}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+err\+\_\+pos}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  math.sqrt(pow(des\_pos.y -\/ position\_.y, 2) +}
+\DoxyCodeLine{2                         pow(des\_pos.x -\/ position\_.x, 2))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacego__to__point_a08a0546d5e969dabc96a01fc27212d9d}\label{namespacego__to__point_a08a0546d5e969dabc96a01fc27212d9d}} 
+\index{go\_to\_point@{go\_to\_point}!err\_yaw@{err\_yaw}}
+\index{err\_yaw@{err\_yaw}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{err\_yaw}{err\_yaw}}
+{\footnotesize\ttfamily def go\+\_\+to\+\_\+point.\+err\+\_\+yaw = \mbox{\hyperlink{namespacego__to__point_ac688bb56fa84763ea2edefc30cae032a}{normalize\+\_\+angle}}(\mbox{\hyperlink{namespacego__to__point_ae0061292741c7ad2a80f6bf7d8d7a76c}{desired\+\_\+yaw}} -\/ \mbox{\hyperlink{namespacego__to__point_a6d53ec90cd5e46f57f098363f19b2019}{yaw\+\_\+}})}
+
+
+
+Once the goal (x,y) is achieved the function orients the robot with the goal orientation. 
+
+/param des\+\_\+yaw(float)\+: desired yaw \mbox{\Hypertarget{namespacego__to__point_a22ae82a27c7d4ec081aec5fae83837be}\label{namespacego__to__point_a22ae82a27c7d4ec081aec5fae83837be}} 
+\index{go\_to\_point@{go\_to\_point}!euler@{euler}}
+\index{euler@{euler}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{euler}{euler}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+euler = transformations.\+euler\+\_\+from\+\_\+quaternion(\mbox{\hyperlink{namespacego__to__point_af07d5616dcc86c42f73b6a21dda5f29f}{quaternion}})}
+
+\mbox{\Hypertarget{namespacego__to__point_aef2e9fd6df834ec234239da39481a0c7}\label{namespacego__to__point_aef2e9fd6df834ec234239da39481a0c7}} 
+\index{go\_to\_point@{go\_to\_point}!feedback@{feedback}}
+\index{feedback@{feedback}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{feedback}{feedback}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+feedback = rt2\+\_\+assignment1.\+msg.\+Position\+Feedback()}
+
+\mbox{\Hypertarget{namespacego__to__point_a4d46f473c423292291ed8573b782a942}\label{namespacego__to__point_a4d46f473c423292291ed8573b782a942}} 
+\index{go\_to\_point@{go\_to\_point}!kp\_a@{kp\_a}}
+\index{kp\_a@{kp\_a}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{kp\_a}{kp\_a}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+kp\+\_\+a = -\/3.\+0}
+
+
+
+angular proportional constant 
+
+\mbox{\Hypertarget{namespacego__to__point_afbc27742ae9a0386ea0a8129cadab309}\label{namespacego__to__point_afbc27742ae9a0386ea0a8129cadab309}} 
+\index{go\_to\_point@{go\_to\_point}!kp\_d@{kp\_d}}
+\index{kp\_d@{kp\_d}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{kp\_d}{kp\_d}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+kp\+\_\+d = 0.\+2}
+
+
+
+linear proportional constant 
+
+function callback of the subscriper of topic /slider
+
+the slider modify the parameter for angular and linear velocity
+
+/param msg\+\_\+slider\+: of type twist is the current value of the slider the slider modify the parameter for angular and linear velocity \mbox{\Hypertarget{namespacego__to__point_afecad4058844db05d8321199e25b4498}\label{namespacego__to__point_afecad4058844db05d8321199e25b4498}} 
+\index{go\_to\_point@{go\_to\_point}!lb\_a@{lb\_a}}
+\index{lb\_a@{lb\_a}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{lb\_a}{lb\_a}}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point.\+lb\+\_\+a = -\/0.\+5}
+
+
+
+lower bound angular velocity 
+
+\mbox{\Hypertarget{namespacego__to__point_a91dbaab25e6080f6b5dbf82cac6ce75c}\label{namespacego__to__point_a91dbaab25e6080f6b5dbf82cac6ce75c}} 
+\index{go\_to\_point@{go\_to\_point}!position\_@{position\_}}
+\index{position\_@{position\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{position\_}{position\_}}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point.\+position\+\_\+ = Point()}
+
+
+
+robot state variables point used to store the actual position 
+
+function callback of the subscriber of the topic /odom it retrieves the x y theta coordinates from the Odom message.
+
+position set to 0 as default
+
+/param msg\+: of type Odometry \mbox{\Hypertarget{namespacego__to__point_a57b4090d0abcbcf0bfa2bcb9329d3036}\label{namespacego__to__point_a57b4090d0abcbcf0bfa2bcb9329d3036}} 
+\index{go\_to\_point@{go\_to\_point}!pub\_@{pub\_}}
+\index{pub\_@{pub\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{pub\_}{pub\_}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+pub\+\_\+ = None}
+
+
+
+publisher that publish to cmd\+\_\+vel 
+
+The main function of the script\+: Creates a publisher on topic /cmd\+\_\+vel to publish the velocity of the robot Creates a subscriber of topic /odom to receive the position of the robot Creates a subscriber of topic /slider to receive the value of the sliders Creates an action in order to manage the F\+SM behaviour. \mbox{\Hypertarget{namespacego__to__point_af07d5616dcc86c42f73b6a21dda5f29f}\label{namespacego__to__point_af07d5616dcc86c42f73b6a21dda5f29f}} 
+\index{go\_to\_point@{go\_to\_point}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{quaternion}{quaternion}}
+{\footnotesize\ttfamily tuple go\+\_\+to\+\_\+point.\+quaternion}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  (}
+\DoxyCodeLine{2         msg.pose.pose.orientation.x,}
+\DoxyCodeLine{3         msg.pose.pose.orientation.y,}
+\DoxyCodeLine{4         msg.pose.pose.orientation.z,}
+\DoxyCodeLine{5         msg.pose.pose.orientation.w)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacego__to__point_ae54b9db8e838e00fa1addf56c511d670}\label{namespacego__to__point_ae54b9db8e838e00fa1addf56c511d670}} 
+\index{go\_to\_point@{go\_to\_point}!rate@{rate}}
+\index{rate@{rate}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{rate}{rate}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+rate = rospy.\+Rate(20)}
+
+\mbox{\Hypertarget{namespacego__to__point_a98ce19d0c843fd1cb438e6630ae107c2}\label{namespacego__to__point_a98ce19d0c843fd1cb438e6630ae107c2}} 
+\index{go\_to\_point@{go\_to\_point}!result@{result}}
+\index{result@{result}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+result = rt2\+\_\+assignment1.\+msg.\+Position\+Result()}
+
+
+
+Function used to action server in order to allow the robot to reach the correct target position Set an appropriate behaviour depending on the current robot state. 
+
+State machine keeps running until the goal is reached or the action is preempted\+: the goal is canceled
+
+/param goal (Pose\+Action\+Goal)\+: x,y,theta coordinates of the goal pose instanciate the message for position result \mbox{\Hypertarget{namespacego__to__point_a9af800eec02eb94f70ee4ac6fbea1ecd}\label{namespacego__to__point_a9af800eec02eb94f70ee4ac6fbea1ecd}} 
+\index{go\_to\_point@{go\_to\_point}!server@{server}}
+\index{server@{server}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+server = None}
+
+
+
+action server 
+
+\mbox{\Hypertarget{namespacego__to__point_acf4a5bffa4335b456ad91661efa8ae4b}\label{namespacego__to__point_acf4a5bffa4335b456ad91661efa8ae4b}} 
+\index{go\_to\_point@{go\_to\_point}!state\_@{state\_}}
+\index{state\_@{state\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{state\_}{state\_}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+state\+\_\+ = 0}
+
+
+
+state set to 0 as default 
+
+funcion used to change the state of the F\+SM
+
+/param state(int)\+: new state of the F\+SM \mbox{\Hypertarget{namespacego__to__point_a856d9759806722969e57291d2dc65d5a}\label{namespacego__to__point_a856d9759806722969e57291d2dc65d5a}} 
+\index{go\_to\_point@{go\_to\_point}!sub\_odom@{sub\_odom}}
+\index{sub\_odom@{sub\_odom}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{sub\_odom}{sub\_odom}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+sub\+\_\+odom = rospy.\+Subscriber(\textquotesingle{}/odom\textquotesingle{}, Odometry, \mbox{\hyperlink{namespacego__to__point_a36304a9f313b0579f7fc69fa01695524}{clbk\+\_\+odom}})}
+
+\mbox{\Hypertarget{namespacego__to__point_a45bed7a567c8e984e563c11f544e9737}\label{namespacego__to__point_a45bed7a567c8e984e563c11f544e9737}} 
+\index{go\_to\_point@{go\_to\_point}!sub\_slider@{sub\_slider}}
+\index{sub\_slider@{sub\_slider}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{sub\_slider}{sub\_slider}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+sub\+\_\+slider = rospy.\+Subscriber(\textquotesingle{}/slider\textquotesingle{},Twist, \mbox{\hyperlink{namespacego__to__point_a9aec3911a70d3d13688b2c283d919dd0}{clbk\+\_\+slider}})}
+
+\mbox{\Hypertarget{namespacego__to__point_a12f30421f55ca239a46a9c34bd416c26}\label{namespacego__to__point_a12f30421f55ca239a46a9c34bd416c26}} 
+\index{go\_to\_point@{go\_to\_point}!success@{success}}
+\index{success@{success}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{success}{success}}
+{\footnotesize\ttfamily bool go\+\_\+to\+\_\+point.\+success = True}
+
+\mbox{\Hypertarget{namespacego__to__point_aaa0345cea167437ea6a05b02470bafe2}\label{namespacego__to__point_aaa0345cea167437ea6a05b02470bafe2}} 
+\index{go\_to\_point@{go\_to\_point}!twist\_msg@{twist\_msg}}
+\index{twist\_msg@{twist\_msg}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{twist\_msg}{twist\_msg}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+twist\+\_\+msg = Twist()}
+
+
+
+Stop the robot Set the linear and the angular velocity to 0. 
+
+\mbox{\Hypertarget{namespacego__to__point_acb4e14986fafe5cb73bb8ad0c178869d}\label{namespacego__to__point_acb4e14986fafe5cb73bb8ad0c178869d}} 
+\index{go\_to\_point@{go\_to\_point}!ub\_a@{ub\_a}}
+\index{ub\_a@{ub\_a}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{ub\_a}{ub\_a}}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point.\+ub\+\_\+a = 0.\+6}
+
+
+
+upper bound angular velocity 
+
+\mbox{\Hypertarget{namespacego__to__point_a16c473b9e717200c483d18e66b48152a}\label{namespacego__to__point_a16c473b9e717200c483d18e66b48152a}} 
+\index{go\_to\_point@{go\_to\_point}!ub\_d@{ub\_d}}
+\index{ub\_d@{ub\_d}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{ub\_d}{ub\_d}}
+{\footnotesize\ttfamily float go\+\_\+to\+\_\+point.\+ub\+\_\+d = 0.\+6}
+
+
+
+upper bound linear velociry 
+
+\mbox{\Hypertarget{namespacego__to__point_a328c9a3bb9322f150f2e67371cd73306}\label{namespacego__to__point_a328c9a3bb9322f150f2e67371cd73306}} 
+\index{go\_to\_point@{go\_to\_point}!x@{x}}
+\index{x@{x}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+x}
+
+\mbox{\Hypertarget{namespacego__to__point_ac372e1a492f9aa66d29f365cc1c57d8c}\label{namespacego__to__point_ac372e1a492f9aa66d29f365cc1c57d8c}} 
+\index{go\_to\_point@{go\_to\_point}!y@{y}}
+\index{y@{y}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+y}
+
+\mbox{\Hypertarget{namespacego__to__point_a6d53ec90cd5e46f57f098363f19b2019}\label{namespacego__to__point_a6d53ec90cd5e46f57f098363f19b2019}} 
+\index{go\_to\_point@{go\_to\_point}!yaw\_@{yaw\_}}
+\index{yaw\_@{yaw\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{yaw\_}{yaw\_}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+yaw\+\_\+ = 0}
+
+
+
+yaw angle set to 0 as default 
+
+\mbox{\Hypertarget{namespacego__to__point_a67f95834f0959feb3facd17bc7fa2b38}\label{namespacego__to__point_a67f95834f0959feb3facd17bc7fa2b38}} 
+\index{go\_to\_point@{go\_to\_point}!yaw\_precision\_@{yaw\_precision\_}}
+\index{yaw\_precision\_@{yaw\_precision\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{yaw\_precision\_}{yaw\_precision\_}}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point.\+yaw\+\_\+precision\+\_\+ = math.\+pi / 9}
+
+
+
+parameters for control 
+
+\mbox{\Hypertarget{namespacego__to__point_af74ccf49164d0478ca8343e2031d5813}\label{namespacego__to__point_af74ccf49164d0478ca8343e2031d5813}} 
+\index{go\_to\_point@{go\_to\_point}!yaw\_precision\_2\_@{yaw\_precision\_2\_}}
+\index{yaw\_precision\_2\_@{yaw\_precision\_2\_}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{yaw\_precision\_2\_}{yaw\_precision\_2\_}}
+{\footnotesize\ttfamily int go\+\_\+to\+\_\+point.\+yaw\+\_\+precision\+\_\+2\+\_\+ = math.\+pi / 90}
+
+\mbox{\Hypertarget{namespacego__to__point_a2fd68a76b8583598a4bceccdeae5d73b}\label{namespacego__to__point_a2fd68a76b8583598a4bceccdeae5d73b}} 
+\index{go\_to\_point@{go\_to\_point}!z@{z}}
+\index{z@{z}!go\_to\_point@{go\_to\_point}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily go\+\_\+to\+\_\+point.\+z}
+
