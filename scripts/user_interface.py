@@ -1,3 +1,4 @@
+
 """
  .. module:: go_to_point
  	:platform: Unix
@@ -15,6 +16,7 @@
   node the goal is cancelled, setting also the velocity to zero (to stop the robot)
 
 """
+
 import rospy
 import time
 from rt2_assignment1.srv import Command
