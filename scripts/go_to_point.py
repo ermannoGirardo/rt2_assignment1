@@ -136,8 +136,10 @@ def normalize_angle(angle):
     function used to normalize the angle
 
     Args:
-        angle(float): angle to normalize
-        return: angle normalized
+           angle(float): angle to normalize
+     
+    Returns: 
+           angle(float): angle normalized
 
     """
     if(math.fabs(angle) > math.pi):
