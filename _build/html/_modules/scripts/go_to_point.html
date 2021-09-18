@@ -237,8 +237,9 @@
 
 <span class="sd">    the slider modify the parameter for angular and linear velocity</span>
 
-<span class="sd">    /param msg_slider: of type twist is the current value of the slider</span>
-<span class="sd">    the slider modify the parameter for angular and linear velocity</span>
+<span class="sd">    Args:</span>
+<span class="sd">         msg_slider: of type twist is the current value of the slider</span>
+<span class="sd">         the slider modify the parameter for angular and linear velocity</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">kp_a</span>
@@ -250,7 +251,9 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    function callback of the subscriber of the topic /odom</span>
 <span class="sd">    it retrieves the x y theta coordinates from the Odom message.</span>
-<span class="sd">    /param msg: of type Odometry</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">         msg: of type Odometry</span>
 <span class="sd">  </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">position_</span>
@@ -273,7 +276,8 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    funcion used to change the state of the FSM</span>
 
-<span class="sd">    /param state(int): new state of the FSM</span>
+<span class="sd">    Args:</span>
+<span class="sd">        state(int): new state of the FSM</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">global</span> <span class="n">state_</span>
@@ -285,8 +289,9 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    function used to normalize the angle</span>
 
-<span class="sd">    /param angle(float): angle to normalize</span>
-<span class="sd">    /return: angle normalized</span>
+<span class="sd">    Args:</span>
+<span class="sd">        angle(float): angle to normalize</span>
+<span class="sd">        return: angle normalized</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">fabs</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">):</span>
@@ -299,9 +304,12 @@
 <span class="sd">   </span>
 <span class="sd">    The function is used  to orient the robot toward the goal</span>
 <span class="sd">  </span>
-<span class="sd">    /param des_pos(Point): desired position to compute the desired yaw</span>
+<span class="sd">    Args:</span>
+<span class="sd">         des_pos(Point): desired position to compute the desired yaw</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">global</span> <span class="n">kp_a</span><span class="p">;</span>
     <span class="n">desired_yaw</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">des_pos</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">position_</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">des_pos</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">position_</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
     <span class="n">err_yaw</span> <span class="o">=</span> <span class="n">normalize_angle</span><span class="p">(</span><span class="n">desired_yaw</span> <span class="o">-</span> <span class="n">yaw_</span><span class="p">)</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="n">err_yaw</span><span class="p">)</span>
@@ -326,9 +334,12 @@
 <span class="sd">    Set the linear and the angular velocity depending on the distance to the</span>
 <span class="sd">    goal pose.</span>
 
-<span class="sd">    /param des_pos(Point): desired x y position</span>
+<span class="sd">    Args:</span>
+<span class="sd">         des_pos(Point): desired x y position</span>
 <span class="sd">   </span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">global</span> <span class="n">kp_d</span><span class="p">,</span><span class="n">kp_a</span>
     <span class="n">desired_yaw</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">des_pos</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">position_</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">des_pos</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">position_</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
     <span class="n">err_yaw</span> <span class="o">=</span> <span class="n">desired_yaw</span> <span class="o">-</span> <span class="n">yaw_</span>
     <span class="n">err_pos</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="n">des_pos</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">position_</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span>
@@ -338,7 +349,7 @@
 
     <span class="k">if</span> <span class="n">err_pos</span> <span class="o">&gt;</span> <span class="n">dist_precision_</span><span class="p">:</span>
         <span class="n">twist_msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
-        <span class="n">twist_msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.3</span>
+        <span class="n">twist_msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">kp_d</span>
         <span class="k">if</span> <span class="n">twist_msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">ub_d</span><span class="p">:</span>
            <span class="n">twist_msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">ub_d</span>
 
@@ -358,9 +369,12 @@
 <span class="sd">    Once the goal (x,y) is achieved the function </span>
 <span class="sd">    orients the robot with the goal orientation</span>
 <span class="sd">   </span>
-<span class="sd">    /param des_yaw(float): desired yaw</span>
+<span class="sd">    Args:</span>
+<span class="sd">         des_yaw(float): desired yaw</span>
 
 <span class="sd">    &quot;&quot;&quot;</span> 
+    
+    <span class="k">global</span> <span class="n">kp_a</span>
     <span class="n">err_yaw</span> <span class="o">=</span> <span class="n">normalize_angle</span><span class="p">(</span><span class="n">des_yaw</span> <span class="o">-</span> <span class="n">yaw_</span><span class="p">)</span>
     <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="n">err_yaw</span><span class="p">)</span>
     <span class="n">twist_msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
@@ -398,12 +412,13 @@
 <span class="sd">    State machine keeps running until the goal is reached</span>
 <span class="sd">    or the action is preempted: the goal is canceled</span>
 
-<span class="sd">    /param goal (PoseActionGoal): x,y,theta coordinates</span>
-<span class="sd">    of the goal pose</span>
+<span class="sd">    Args:</span>
+<span class="sd">         goal (PoseActionGoal): x,y,theta coordinates</span>
+<span class="sd">         of the goal pose</span>
 <span class="sd">   </span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">global</span> <span class="n">server</span>
+    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">state_</span>
     <span class="c1">##instanciate the message for position result</span>
     <span class="n">result</span><span class="o">=</span><span class="n">rt2_assignment1</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">PositionResult</span><span class="p">()</span>
     <span class="n">desired_position</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>

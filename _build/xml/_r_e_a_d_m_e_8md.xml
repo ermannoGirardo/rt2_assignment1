@@ -48,6 +48,31 @@
 <codeline><highlight class="normal"><sp/><sp/>4)<sp/>Publish<sp/>on<sp/>topic<sp/>/cmd_vel<sp/>the<sp/>velocity<sp/>equal<sp/>to<sp/>zero<sp/>if<sp/>the<sp/>user<sp/>decides<sp/>to<sp/>stop<sp/>the<sp/>robot.</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">*<sp/>A<sp/>coppelia<sp/>scene<sp/>in<sp/>order<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>also<sp/>in<sp/>Coppelia<sp/>(Vrep).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Notebook</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>notebook<sp/>folder<sp/>you<sp/>can<sp/>find<sp/>User_Interface.ipynb<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>particular<sp/>this<sp/>file<sp/>is<sp/>the<sp/>graphical<sp/>user<sp/>interface<sp/>developed<sp/>with<sp/>Jupiter<sp/>Notebook.</highlight></codeline>
+<codeline><highlight class="normal">Is<sp/>also<sp/>delevoped<sp/>real-time<sp/>graphs<sp/>of<sp/>the<sp/>robot<sp/>behavior.</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>order<sp/>to<sp/>start<sp/>the<sp/>notebook<sp/>execute:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">path/to/ros_ws/src/rt2_assignment1/notebooks$<sp/>jupyter<sp/>notebook<sp/>--allow-root<sp/>--ip<sp/>0.0.0.0</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Then<sp/>open<sp/>web<sp/>browser<sp/>at<sp/>localhost:8888<sp/>and<sp/>select<sp/>the<sp/>notebook.</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Requirements</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>starting<sp/>/<sp/>stopping<sp/>the<sp/>robot<sp/>“random<sp/>position”<sp/>behaviour<sp/>by<sp/>using<sp/>two<sp/>Buttons<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>setting<sp/>the<sp/>linear<sp/>and<sp/>angular<sp/>velocity<sp/>by<sp/>using<sp/>two<sp/>sliders-</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>directly<sp/>controlling<sp/>the<sp/>robot<sp/>movements<sp/>by<sp/>using<sp/>5<sp/>Buttons:<sp/>forward,<sp/>turn<sp/>right,<sp/>backward,<sp/>turn<sp/>left,<sp/>stop</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Concerning<sp/>the<sp/>graphs</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>a<sp/>line<sp/>plot<sp/>for<sp/>visualizing<sp/>cmd_vel<sp/>vs.<sp/>actual<sp/>velocity<sp/>for<sp/>linear<sp/>and<sp/>angular<sp/>velocity</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>a<sp/>bar<sp/>plot<sp/>displaying<sp/>the<sp/>number<sp/>of<sp/>reached<sp/>targets<sp/>and<sp/>cancelled<sp/>targets</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>a<sp/>hist<sp/>plot<sp/>showing<sp/>the<sp/>time<sp/>required<sp/>to<sp/>reach<sp/>targets</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>an<sp/>xy<sp/>graph<sp/>showing<sp/>the<sp/>robot’s<sp/>position<sp/>and<sp/>the<sp/>orientation<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal">Sphinx<sp/>documentation<sp/>has<sp/>been<sp/>developed.</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>find<sp/>it<sp/>into<sp/>docs<sp/>folder</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">#<sp/>Launch<sp/>files</highlight></codeline>
 <codeline><highlight class="normal">In<sp/>the<sp/>folder<sp/>launch<sp/>you<sp/>can<sp/>find<sp/>two<sp/>launch<sp/>file:</highlight></codeline>

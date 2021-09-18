@@ -244,12 +244,13 @@
 
 the slider modify the parameter for angular and linear velocity
 
-/param msg_slider: of type twist is the current value of the slider
-the slider modify the parameter for angular and linear velocity</verbatim> </para>
+Args:
+     msg_slider: of type twist is the current value of the slider
+     the slider modify the parameter for angular and linear velocity</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="80" column="1" bodyfile="scripts/go_to_point.py" bodystart="80" bodyend="94"/>
+        <location file="scripts/go_to_point.py" line="80" column="1" bodyfile="scripts/go_to_point.py" bodystart="80" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1a36304a9f313b0579f7fc69fa01695524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -265,11 +266,13 @@ the slider modify the parameter for angular and linear velocity</verbatim> </par
         <detaileddescription>
 <para><verbatim>function callback of the subscriber of the topic /odom
 it retrieves the x y theta coordinates from the Odom message.
-/param msg: of type Odometry</verbatim> </para>
+
+Args:
+     msg: of type Odometry</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="95" column="1" bodyfile="scripts/go_to_point.py" bodystart="95" bodyend="117"/>
+        <location file="scripts/go_to_point.py" line="96" column="1" bodyfile="scripts/go_to_point.py" bodystart="96" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1a31ee48e5cae36821049b572a96b7c8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -285,11 +288,12 @@ it retrieves the x y theta coordinates from the Odom message.
         <detaileddescription>
 <para><verbatim>funcion used to change the state of the FSM
 
-/param state(int): new state of the FSM</verbatim> </para>
+Args:
+    state(int): new state of the FSM</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="118" column="1" bodyfile="scripts/go_to_point.py" bodystart="118" bodyend="129"/>
+        <location file="scripts/go_to_point.py" line="121" column="1" bodyfile="scripts/go_to_point.py" bodystart="121" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1ac688bb56fa84763ea2edefc30cae032a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -305,12 +309,13 @@ it retrieves the x y theta coordinates from the Odom message.
         <detaileddescription>
 <para><verbatim>function used to normalize the angle
 
-/param angle(float): angle to normalize
-/return: angle normalized</verbatim> </para>
+Args:
+    angle(float): angle to normalize
+    return: angle normalized</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="130" column="1" bodyfile="scripts/go_to_point.py" bodystart="130" bodyend="141"/>
+        <location file="scripts/go_to_point.py" line="134" column="1" bodyfile="scripts/go_to_point.py" bodystart="134" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1a9c3011a3065fcbefcc1c5ad8c9979669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -328,11 +333,12 @@ it retrieves the x y theta coordinates from the Odom message.
    
 The function is used  to orient the robot toward the goal
   
-/param des_pos(Point): desired position to compute the desired yaw</verbatim> </para>
+Args:
+     des_pos(Point): desired position to compute the desired yaw</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="142" column="1" bodyfile="scripts/go_to_point.py" bodystart="142" bodyend="167"/>
+        <location file="scripts/go_to_point.py" line="147" column="1" bodyfile="scripts/go_to_point.py" bodystart="147" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1ac8579665c0fbf665f734476554fac37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -351,11 +357,12 @@ The function is used  to orient the robot toward the goal
 Set the linear and the angular velocity depending on the distance to the
 goal pose.
 
-/param des_pos(Point): desired x y position</verbatim> </para>
+Args:
+     des_pos(Point): desired x y position</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="168" column="1" bodyfile="scripts/go_to_point.py" bodystart="168" bodyend="201"/>
+        <location file="scripts/go_to_point.py" line="176" column="1" bodyfile="scripts/go_to_point.py" bodystart="176" bodyend="212"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1a4a406386ca62830c19c93949e923f7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -372,11 +379,12 @@ goal pose.
 <para><verbatim>Once the goal (x,y) is achieved the function 
 orients the robot with the goal orientation
    
-/param des_yaw(float): desired yaw</verbatim> </para>
+Args:
+     des_yaw(float): desired yaw</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="202" column="1" bodyfile="scripts/go_to_point.py" bodystart="202" bodyend="224"/>
+        <location file="scripts/go_to_point.py" line="213" column="1" bodyfile="scripts/go_to_point.py" bodystart="213" bodyend="238"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1ac2587220a4ac9c845bc9c5b0b45d5835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -391,7 +399,7 @@ Set the linear and the angular velocity to 0</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="225" column="1" bodyfile="scripts/go_to_point.py" bodystart="225" bodyend="237"/>
+        <location file="scripts/go_to_point.py" line="239" column="1" bodyfile="scripts/go_to_point.py" bodystart="239" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1a2203d17b7e563bee20ed4c988548df45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -412,12 +420,13 @@ current robot state.
 State machine keeps running until the goal is reached
 or the action is preempted: the goal is canceled
 
-/param goal (PoseActionGoal): x,y,theta coordinates
-of the goal pose</verbatim> </para>
+Args:
+     goal (PoseActionGoal): x,y,theta coordinates
+     of the goal pose</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="238" column="1" bodyfile="scripts/go_to_point.py" bodystart="238" bodyend="283"/>
+        <location file="scripts/go_to_point.py" line="252" column="1" bodyfile="scripts/go_to_point.py" bodystart="252" bodyend="298"/>
       </memberdef>
       <memberdef kind="function" id="go__to__point_8py_1ab92bd6db1ec323a4d795ed6cb40aebe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -436,7 +445,7 @@ Creates an action in order to manage the FSM behaviour</verbatim> <linebreak/>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/go_to_point.py" line="284" column="1" bodyfile="scripts/go_to_point.py" bodystart="284" bodyend="304"/>
+        <location file="scripts/go_to_point.py" line="299" column="1" bodyfile="scripts/go_to_point.py" bodystart="299" bodyend="319"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

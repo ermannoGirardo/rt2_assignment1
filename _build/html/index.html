@@ -204,15 +204,23 @@ in order to check the robot’s position on /odom topic.</p>
 <dt class="sig sig-object py" id="scripts.go_to_point.change_state">
 <span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">change_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#change_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.change_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>funcion used to change the state of the FSM</p>
-<p>/param state(int): new state of the FSM</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – new state of the FSM</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="scripts.go_to_point.clbk_odom">
 <span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">clbk_odom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#clbk_odom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.clbk_odom" title="Permalink to this definition">¶</a></dt>
 <dd><p>function callback of the subscriber of the topic /odom
-it retrieves the x y theta coordinates from the Odom message.
-/param msg: of type Odometry</p>
+it retrieves the x y theta coordinates from the Odom message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>msg</strong> – of type Odometry</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -220,8 +228,14 @@ it retrieves the x y theta coordinates from the Odom message.
 <span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">clbk_slider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_slider</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#clbk_slider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.clbk_slider" title="Permalink to this definition">¶</a></dt>
 <dd><p>function  callback of the subscriper of topic /slider</p>
 <p>the slider modify the parameter for angular and linear velocity</p>
-<p>/param msg_slider: of type twist is the current value of the slider
-the slider modify the parameter for angular and linear velocity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg_slider</strong> – of type twist is the current value of the slider</p></li>
+<li><p><strong>velocity</strong> (<em>the slider modify the parameter for angular and linear</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -236,7 +250,11 @@ Set the linear and the angular velocity to 0</p>
 <span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">fix_final_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_yaw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#fix_final_yaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.fix_final_yaw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Once the goal (x,y) is achieved the function
 orients the robot with the goal orientation</p>
-<p>/param des_yaw(float): desired yaw</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_yaw</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – desired yaw</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -244,7 +262,11 @@ orients the robot with the goal orientation</p>
 <span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">fix_yaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">des_pos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#fix_yaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.fix_yaw" title="Permalink to this definition">¶</a></dt>
 <dd><p>function used to orient the robot in a desired direction</p>
 <p>The function is used  to orient the robot toward the goal</p>
-<p>/param des_pos(Point): desired position to compute the desired yaw</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_pos</strong> (<em>Point</em>) – desired position to compute the desired yaw</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -253,7 +275,11 @@ orients the robot with the goal orientation</p>
 <dd><p>Once robot is aligned this function drive the robot toward the goal</p>
 <p>Set the linear and the angular velocity depending on the distance to the
 goal pose.</p>
-<p>/param des_pos(Point): desired x y position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>des_pos</strong> (<em>Point</em>) – desired x y position</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -265,8 +291,14 @@ Set an appropriate behaviour depending on the
 current robot state.
 State machine keeps running until the goal is reached
 or the action is preempted: the goal is canceled</p>
-<p>/param goal (PoseActionGoal): x,y,theta coordinates
-of the goal pose</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>goal</strong> (<em>PoseActionGoal</em>) – x,y,theta coordinates</p></li>
+<li><p><strong>pose</strong> (<em>of the goal</em>) – </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -283,8 +315,14 @@ Creates an action in order to manage the FSM behaviour</p>
 <dt class="sig sig-object py" id="scripts.go_to_point.normalize_angle">
 <span class="sig-prename descclassname"><span class="pre">scripts.go_to_point.</span></span><span class="sig-name descname"><span class="pre">normalize_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/go_to_point.html#normalize_angle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.go_to_point.normalize_angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>function used to normalize the angle</p>
-<p>/param angle(float): angle to normalize
-/return: angle normalized</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – angle to normalize</p></li>
+<li><p><strong>return</strong> – angle normalized</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

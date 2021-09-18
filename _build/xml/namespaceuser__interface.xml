@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="scripts/user_interface.py" line="22" column="1" bodyfile="scripts/user_interface.py" bodystart="22" bodyend="42"/>
+        <location file="scripts/user_interface.py" line="24" column="1" bodyfile="scripts/user_interface.py" bodystart="24" bodyend="44"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

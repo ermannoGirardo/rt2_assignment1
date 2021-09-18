@@ -10,14 +10,35 @@ In this branch you can find two nodes in python and two nodes in C++\+:
 \item \mbox{\hyperlink{position__service_8cpp}{position\+\_\+service.\+cpp}} is a simple server that has the scope of generate a random target. This node infact generate three random components (x and y components for the position, theta component for the orientation) in a specified interval \mbox{[}min,max\mbox{]} via custom service message Random\+Position.\+srv.
 \item \mbox{\hyperlink{state__machine_8cpp}{state\+\_\+machine.\+cpp}} is a node wich communicates with all other nodes, in particular\+: 1) a client is generated in order to set the fields of the random target and send the request to position\+\_\+service 2) The node implements a function callback of the \mbox{\hyperlink{namespaceuser__interface}{user\+\_\+interface}} , in order to check the request done by the user, setting properly the value of the variable start. 3) Implements an action client in order to cancel the goal if the user decides to stop the robot. 4) Publish on topic /cmd\+\_\+vel the velocity equal to zero if the user decides to stop the robot.
 \item A coppelia scene in order to launch the simulation also in Coppelia (Vrep).
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Launch files}\label{md__r_e_a_d_m_e_autotoc_md3}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Notebook}\label{md__r_e_a_d_m_e_autotoc_md3}
+In the notebook folder you can find User\+\_\+\+Interface.\+ipynb file. In particular this file is the graphical user interface developed with Jupiter Notebook. Is also delevoped real-\/time graphs of the robot behavior. In order to start the notebook execute\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{path/to/ros\_ws/src/rt2\_assignment1/notebooks\$ jupyter notebook -\/-\/allow-\/root -\/-\/ip 0.0.0.0}
+\end{DoxyCode}
+
+
+Then open web browser at localhost\+:8888 and select the notebook. \hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Requirements}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item starting / stopping the robot “random position” behaviour by using two Buttons
+\item setting the linear and angular velocity by using two sliders-\/
+\item directly controlling the robot movements by using 5 Buttons\+: forward, turn right, backward, turn left, stop 
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsection{Concerning the graphs}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item a line plot for visualizing cmd\+\_\+vel vs. actual velocity for linear and angular velocity
+\item a bar plot displaying the number of reached targets and cancelled targets
+\item a hist plot showing the time required to reach targets
+\item an xy graph showing the robot’s position and the orientation
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Documentation}\label{md__r_e_a_d_m_e_autotoc_md6}
+Sphinx documentation has been developed. You can find it into docs folder\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Launch files}\label{md__r_e_a_d_m_e_autotoc_md7}
 In the folder launch you can find two launch file\+:
 
 
 \begin{DoxyItemize}
 \item sim.\+launch starts the simulation launching Gazebo simulator, with an empty map and loading the Universal Robot desciption on it. It run all the four nodes above described.
 \item sim\+Vrep.\+launch starts only the four nodes described above without launching Gazebo simulator and load the U\+R\+DF on the R\+OS server.
-\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{How to launch the simulation in Gazebo}\label{md__r_e_a_d_m_e_autotoc_md4}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{How to launch the simulation in Gazebo}\label{md__r_e_a_d_m_e_autotoc_md8}
 In order to launch the simulation on Gazebo copy and paste the following command on Ubuntu shall
 
 
@@ -26,7 +47,7 @@ In order to launch the simulation on Gazebo copy and paste the following command
 \end{DoxyCode}
 
 
- \hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{How to launch the simulation on Vrep}\label{md__r_e_a_d_m_e_autotoc_md5}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{How to launch the simulation on Vrep}\label{md__r_e_a_d_m_e_autotoc_md9}
 In order to launch the simulation on Vrep\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{https://www.coppeliarobotics.com/downloads}

@@ -82,18 +82,40 @@ What you can find in this branch</h1>
 <li>A coppelia scene in order to launch the simulation also in Coppelia (Vrep).</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
+Notebook</h1>
+<p>In the notebook folder you can find User_Interface.ipynb file. In particular this file is the graphical user interface developed with Jupiter Notebook. Is also delevoped real-time graphs of the robot behavior. In order to start the notebook execute: </p><div class="fragment"><div class="line">path/to/ros_ws/src/rt2_assignment1/notebooks$ jupyter notebook --allow-root --ip 0.0.0.0</div>
+</div><!-- fragment --><p>Then open web browser at localhost:8888 and select the notebook. </p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Requirements</h2>
+<ul>
+<li>starting / stopping the robot “random position” behaviour by using two Buttons</li>
+<li>setting the linear and angular velocity by using two sliders-</li>
+<li>directly controlling the robot movements by using 5 Buttons: forward, turn right, backward, turn left, stop </li>
+</ul>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Concerning the graphs</h3>
+<ul>
+<li>a line plot for visualizing cmd_vel vs. actual velocity for linear and angular velocity</li>
+<li>a bar plot displaying the number of reached targets and cancelled targets</li>
+<li>a hist plot showing the time required to reach targets</li>
+<li>an xy graph showing the robot’s position and the orientation</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Documentation</h1>
+<p>Sphinx documentation has been developed. You can find it into docs folder</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Launch files</h1>
 <p>In the folder launch you can find two launch file:</p>
 <ul>
 <li>sim.launch starts the simulation launching Gazebo simulator, with an empty map and loading the Universal Robot desciption on it. It run all the four nodes above described.</li>
 <li>simVrep.launch starts only the four nodes described above without launching Gazebo simulator and load the URDF on the ROS server.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 How to launch the simulation in Gazebo</h1>
 <p>In order to launch the simulation on Gazebo copy and paste the following command on Ubuntu shall</p>
 <div class="fragment"><div class="line">roslaunch rt2_assignment1 sim.launch</div>
 </div><!-- fragment --><p><img src="https://user-images.githubusercontent.com/48509825/118884149-628ff800-b8f6-11eb-8165-a19e41745097.png" alt="GazeboSimGraph" class="inline"/> </p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 How to launch the simulation on Vrep</h1>
 <p>In order to launch the simulation on Vrep: </p><div class="fragment"><div class="line">https://www.coppeliarobotics.com/downloads</div>
 </div><!-- fragment --><p>Download the education version zip and unzip it, should be something as CoppeliaSim_Edu_V4_2_0_Ubuntu20_04. Then move into this folder and change the permission of the coppeliaSim.sh by digit </p><div class="fragment"><div class="line">chmod +x coppeliaSim.sh</div>

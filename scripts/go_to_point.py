@@ -83,8 +83,9 @@ def clbk_slider(msg_slider):
 
     the slider modify the parameter for angular and linear velocity
 
-    /param msg_slider: of type twist is the current value of the slider
-    the slider modify the parameter for angular and linear velocity
+    Args:
+         msg_slider: of type twist is the current value of the slider
+         the slider modify the parameter for angular and linear velocity
 
     """
     global kp_a
@@ -96,7 +97,9 @@ def clbk_odom(msg):
     """
     function callback of the subscriber of the topic /odom
     it retrieves the x y theta coordinates from the Odom message.
-    /param msg: of type Odometry
+    
+    Args:
+         msg: of type Odometry
   
     """
     global position_
@@ -119,7 +122,8 @@ def change_state(state):
     """
     funcion used to change the state of the FSM
 
-    /param state(int): new state of the FSM
+    Args:
+        state(int): new state of the FSM
 
     """
     global state_
@@ -131,8 +135,9 @@ def normalize_angle(angle):
     """
     function used to normalize the angle
 
-    /param angle(float): angle to normalize
-    /return: angle normalized
+    Args:
+        angle(float): angle to normalize
+        return: angle normalized
 
     """
     if(math.fabs(angle) > math.pi):
@@ -145,7 +150,8 @@ def fix_yaw(des_pos):
    
     The function is used  to orient the robot toward the goal
   
-    /param des_pos(Point): desired position to compute the desired yaw
+    Args:
+         des_pos(Point): desired position to compute the desired yaw
 
     """
     
@@ -174,7 +180,8 @@ def go_straight_ahead(des_pos):
     Set the linear and the angular velocity depending on the distance to the
     goal pose.
 
-    /param des_pos(Point): desired x y position
+    Args:
+         des_pos(Point): desired x y position
    
     """
     
@@ -208,7 +215,8 @@ def fix_final_yaw(des_yaw):
     Once the goal (x,y) is achieved the function 
     orients the robot with the goal orientation
    
-    /param des_yaw(float): desired yaw
+    Args:
+         des_yaw(float): desired yaw
 
     """ 
     
@@ -250,8 +258,9 @@ def go_to_point(goal):
     State machine keeps running until the goal is reached
     or the action is preempted: the goal is canceled
 
-    /param goal (PoseActionGoal): x,y,theta coordinates
-    of the goal pose
+    Args:
+         goal (PoseActionGoal): x,y,theta coordinates
+         of the goal pose
    
     """
 

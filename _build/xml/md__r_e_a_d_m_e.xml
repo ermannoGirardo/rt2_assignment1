@@ -24,6 +24,35 @@
 </para>
 </sect1>
 <sect1 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>Notebook</title>
+<para>In the notebook folder you can find User_Interface.ipynb file. In particular this file is the graphical user interface developed with Jupiter Notebook. Is also delevoped real-time graphs of the robot behavior. In order to start the notebook execute: <programlisting><codeline><highlight class="normal">path/to/ros_ws/src/rt2_assignment1/notebooks$<sp/>jupyter<sp/>notebook<sp/>--allow-root<sp/>--ip<sp/>0.0.0.0</highlight></codeline>
+</programlisting></para>
+<para>Then open web browser at localhost:8888 and select the notebook. </para>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>Requirements</title>
+<para><itemizedlist>
+<listitem><para>starting / stopping the robot “random position” behaviour by using two Buttons</para>
+</listitem><listitem><para>setting the linear and angular velocity by using two sliders-</para>
+</listitem><listitem><para>directly controlling the robot movements by using 5 Buttons: forward, turn right, backward, turn left, stop </para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md5">
+<title>Concerning the graphs</title>
+<para><itemizedlist>
+<listitem><para>a line plot for visualizing cmd_vel vs. actual velocity for linear and angular velocity</para>
+</listitem><listitem><para>a bar plot displaying the number of reached targets and cancelled targets</para>
+</listitem><listitem><para>a hist plot showing the time required to reach targets</para>
+</listitem><listitem><para>an xy graph showing the robot’s position and the orientation</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md6">
+<title>Documentation</title>
+<para>Sphinx documentation has been developed. You can find it into docs folder</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md7">
 <title>Launch files</title>
 <para>In the folder launch you can find two launch file:</para>
 <para><itemizedlist>
@@ -32,7 +61,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md4">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md8">
 <title>How to launch the simulation in Gazebo</title>
 <para>In order to launch the simulation on Gazebo copy and paste the following command on Ubuntu shall</para>
 <para><programlisting><codeline><highlight class="normal">roslaunch<sp/>rt2_assignment1<sp/>sim.launch</highlight></codeline>
@@ -40,7 +69,7 @@
 <para><image type="html" name="118884149-628ff800-b8f6-11eb-8165-a19e41745097.png" inline="yes"></image>
  </para>
 </sect1>
-<sect1 id="md__r_e_a_d_m_e_1autotoc_md5">
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md9">
 <title>How to launch the simulation on Vrep</title>
 <para>In order to launch the simulation on Vrep: <programlisting><codeline><highlight class="normal">https://www.coppeliarobotics.com/downloads</highlight></codeline>
 </programlisting></para>
